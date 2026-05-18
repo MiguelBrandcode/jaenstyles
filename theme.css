@@ -1,0 +1,139 @@
+/* START IDS: */
+/* Sustituir los siguientes IDs por clases o atributos de datos para evitar problemas de especificidad y mantener el CSS limpio y mantenible. */
+
+/* #block-segittur-segitturstaticfreehtmlblock-2  -- Bloque HTML Header Empieza tu viaje */
+
+body:not(.user-logged-in) .block:has(#edition-block) {
+  display: none;
+}
+
+/* STOP IDS: */
+
+:root {
+  --white: #fff;
+  --black: #000;
+}
+
+/*START Header*/
+
+body:not(.user-logged-in):not(.path-segittur-search) #page > header {
+  position: fixed !important;
+  width: 100%;
+}
+
+header nav > div {
+  display: flex;
+  align-items: center;
+}
+
+#segittur-header [alt="Logo"] {
+  width: 180px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1000px) {
+  #segittur-header [alt="Logo"] {
+    width: 130px;
+  }
+}
+
+body:not(.scrolled):not(.user-logged-in):not(.path-segittur-search)
+  #segittur-header:not(.open)
+  [alt="Logo"] {
+  filter: contrast(0%) brightness(200%);
+}
+
+.scrolled #segittur-header [alt="Logo"] {
+  width: 130px;
+  transition: all 0.3s ease;
+}
+
+body:not(.user-logged-in):not(.path-segittur-search) #segittur-header {
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+}
+
+.scrolled #segittur-header {
+  padding-block: 7px !important;
+  transition: all 0.3s ease;
+}
+
+body:not(.user-logged-in):not(.path-segittur-search).scrolled header nav,
+body:not(.user-logged-in):not(.path-segittur-search)
+  header
+  nav:has(#segittur-header.open) {
+  background-color: var(--white) !important;
+}
+
+header nav > div #block-segittur-segitturstaticfreehtmlblock-2 {
+  text-wrap: nowrap;
+}
+
+@media (max-width: 700px) {
+  header nav > div #block-segittur-segitturstaticfreehtmlblock-2 {
+    display: none;
+  }
+}
+
+#page > header nav {
+  padding-inline: 40px;
+}
+
+@media (max-width: 1000px) {
+  #page > header nav {
+    padding-inline: 10px;
+  }
+}
+
+body:not(.scrolled):not(.user-logged-in):not(.path-segittur-search)
+  nav
+  #segittur-header:not(.open)
+  a:has(svg)
+  svg,
+body:not(.scrolled):not(.user-logged-in):not(.path-segittur-search)
+  nav
+  #segittur-header:not(.open)
+  div:has(svg)
+  svg,
+body:not(.scrolled):not(.user-logged-in):not(.path-segittur-search)
+  nav
+  #segittur-header:not(.open)
+  ul.menu-level--0
+  > li
+  > a {
+  filter: contrast(0%) brightness(200%);
+}
+
+nav ul.menu-level--0 > li > a {
+  color: #6b6b6b;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+body:not(.scrolled):not(.user-logged-in):not(.path-segittur-search)
+  nav
+  .language
+  div:has(svg)
+  span
+  > svg {
+  filter: none !important;
+}
+
+body.scrolled nav .language button > svg,
+body:not(.scrolled) nav #segittur-header.open .language button > svg {
+  filter: invert(1);
+}
+
+/*STOP Header*/
+
+/*Firt Section To top*/
+
+.node__content ._none:nth-child(1) .layout:not(:has(.full-width-section)) {
+  margin-top: 0 !important;
+  max-width: unset !important;
+}
+
+/*Firt Section To top*/
+
