@@ -1,17 +1,602 @@
 <div id="edition-block">
 
-<style>
-  /* START IDS: */
-  /* Sustituir los siguientes IDs por clases o atributos de datos para evitar problemas de especificidad y mantener el CSS limpio y mantenible. */
+    <style>
+        /* START IDS: */
+        /* Sustituir los siguientes IDs por clases o atributos de datos para evitar problemas de especificidad y mantener el CSS limpio y mantenible. */
 
 
-  /* STOP IDS: */
+        /* STOP IDS: */
 
-  :root {
-  }
+        :root {}
 
-  /* START Section*/
-  /* STOP SECTION */
+        /* START Section SERVICIOS*/
 
-</style>
+        .services {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            --oficina--grey-background: #f8f8f8;
+            --brand-color: yellow;
+            --grey-text: #6b6b6b;
+            --border-radius-normal: 10px;
+            --instrument: "Instrument Serif", serif;
+            --bb-h2_text-color: #000000;
+            --bb-h2_text-size: 36px;
+        }
+
+        /* Grid de servicios */
+        .services_grid {
+            column-gap: 3%;
+            row-gap: 20px;
+            background-color: var(--oficina--grey-background);
+            width: 100%;
+            display: flex;
+            position: relative;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 14px;
+            border-radius: var(--border-radius-normal);
+            flex-flow: wrap;
+            padding: 40px;
+        }
+
+        h2,
+        .h2 {
+            color: var(--bb-h2_text-color) !important;
+            font-size: var(--bb-h2_text-size) !important;
+        }
+
+        .services_text {
+            font-family: var(--sans);
+            margin-bottom: 0px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        /* Rectángulo decorativo */
+        .services_grid-rectangle {
+            z-index: -1;
+            background-color: var(--brand-color);
+            width: 40%;
+            height: 55%;
+            position: absolute;
+            top: -15px;
+            left: -15px;
+        }
+
+        /* Elemento individual */
+        .services_element {
+            display: flex;
+            width: 48.5%;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .services_element {
+            width: 100%;
+        }
+
+        .services_element {
+            width: 31.33%;
+        }
+
+        /* Iconos */
+        .services_icon {
+            background-color: var(--grey-text);
+            width: 20px;
+            height: 20px;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+        }
+
+        .services_icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+        }
+
+        /* Texto de servicio */
+        .services_text {
+            font-family: var(--sans);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-bottom: 0;
+        }
+
+        /* Títulos */
+        .title-8 {
+            font-family: var(--primary);
+            color: var(--black);
+            text-transform: uppercase;
+            border-bottom-style: none;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+
+        .title-8.text-align-center {
+            text-align: center;
+            width: calc(100% - 50px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .title-2,
+        .title-2-microsite {
+            font-family: var(--instrument);
+            font-size: 65px;
+            font-weight: 400;
+            line-height: 65px;
+            font-style: italic;
+            margin-top: 0;
+            margin-bottom: 0;
+            color: var(--black);
+        }
+
+        .title-2-microsite {
+            font-size: 50px;
+            line-height: 50px;
+        }
+
+        .title-container {
+            column-gap: 3px;
+            row-gap: 3px;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+        }
+
+        .title-content-gap {
+            column-gap: 30px;
+            row-gap: 30px;
+            justify-content: flex-start;
+            align-items: stretch;
+            display: flex;
+            flex-flow: column;
+        }
+
+        .icon-services-articulos-aseo {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-articulos-aseo.png");
+        }
+
+        .icon-services-bar {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-bar.png");
+        }
+
+        .icon-services-asistencia-medica {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-asistencia-medica.png");
+        }
+
+        .icon-services-banera {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-banera.png");
+        }
+
+        .icon-services-banos {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-banos.png");
+        }
+
+        .icon-services-caja-fuerte {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-caja-fuerte.png");
+        }
+
+        .icon-services-calefaccion {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-calefaccion.png");
+        }
+
+        .icon-services-cama-supletoria {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-cama-supletoria.png");
+        }
+
+        .icon-services-custodia {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-custodia.png");
+        }
+
+        .icon-services-aire-acondicionado {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-aire-acondicionado.png");
+        }
+
+        .icon-services-informacion {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-informacion.png");
+        }
+
+        .icon-services-edificio-historico {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-edificio-historico.png");
+        }
+
+        .icon-services-guarda-equipaje {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-guarda-equipaje.png");
+        }
+
+        .icon-services-habitaciones-comunicadas {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-habitaciones-comunicadas.png");
+        }
+
+        .icon-services-ducha {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-ducha.png");
+        }
+
+        .icon-services-jacuzzi {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-jacuzzi.png");
+        }
+
+        .icon-services-jardines {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-jardines.png");
+        }
+
+        .icon-services-desayuno {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-desayuno.png");
+        }
+
+        .icon-services-hab-familiares {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-hab-familiares.png");
+        }
+
+        .icon-services-adaptado {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-adaptado.png");
+        }
+
+        .icon-services-paisaje-pintoresco {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-paisaje-pintoresco.png");
+        }
+
+        .icon-services-minibar {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-minibar.png");
+        }
+
+        .icon-services-recepcion {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-recepcion.png");
+        }
+
+        .icon-services-piscina {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-piscina.png");
+        }
+
+        .icon-services-prensa {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-prensa.png");
+        }
+
+        .icon-services-sala-reuniones {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-sala-reuniones.png");
+        }
+
+        .icon-services-salon-actos {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-salon-actos.png");
+        }
+
+        .icon-services-secador {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-secador.png");
+        }
+
+        .icon-services-restaurante {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-restaurante.png");
+        }
+
+        .icon-services-parking-gratuito {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-parking-gratuito.png");
+        }
+
+        .icon-services-taquilla {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-taquilla.png");
+        }
+
+        .icon-services-television {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-television.png");
+        }
+
+        .icon-services-toallas {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-toallas.png");
+        }
+
+        .icon-services-vigilancia {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-vigilancia.png");
+        }
+
+        .icon-services-seguridad {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-seguridad.png");
+        }
+
+        .icon-services-smart-tv {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-smart-tv.png");
+        }
+
+        .icon-services-set-cafe {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-set-cafe.png");
+        }
+
+        .icon-services-servicio-planchado {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-servicio-planchado.png");
+        }
+
+        .icon-services-servicio-habitaciones {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-servicio-habitaciones.png");
+        }
+
+        .icon-services-wifi {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-wifi.png");
+        }
+
+        .icon-services-actividades {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-actividades_0.png");
+        }
+
+        .icon-services-habitacion-fumadores {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-habitacion-fumadores.png");
+        }
+
+        .icon-services-carta-almohadas {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-carta-almohadas.png");
+        }
+
+        .icon-services-pista-polideportiva {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-pista-polideportiva.png");
+        }
+
+        .icon-services-piscina-infantil {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-piscina-infantil.png");
+        }
+
+        .icon-services-puestos-informaticos {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-puestos-informaticos.png");
+        }
+
+        .icon-services-paddle {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-paddle.png");
+        }
+
+        .icon-services-sauna {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-sauna.png");
+        }
+
+        .icon-services-mascotas {
+            mask-image: url("/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/icon-services-mascotas.png");
+        }
+
+        .theme-icon {
+            mask-repeat: no-repeat;
+            mask-position: center center;
+        }
+
+        @media screen and (min-width:1280px) {
+
+            .results_grid-4-columns .result .title-8,
+            .profile_resources-grid .result .title-8 {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+        @media screen and (max-width:479px) {
+
+            .results_grid-4-columns .result .title-8,
+            .profile_resources-grid .result .title-8 {
+                font-size: 15px;
+                line-height: 21px;
+            }
+        }
+
+        /* h2 - Media queries encontradas */
+        @media screen and (max-width:991px) {
+            h2 {
+                margin-top: 35px;
+                margin-bottom: 12px;
+                font-size: 19px;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            h2 {
+                margin-top: 30px;
+                margin-bottom: 8px;
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            .featured-content .featured-content_title-separation h2 {
+                font-size: 30px;
+                line-height: 42px;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .featured-content h2 {
+                font-size: 27px;
+                line-height: 32px;
+            }
+        }
+
+        @media screen and (max-width:479px) {
+            .featured-content h2 {
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 30px;
+            }
+        }
+
+        /* STOP Seccion SERVICIOS*/
+
+
+        /* START Seccion Map */
+
+        .map {
+            --primary: Montserrat, sans-serif;
+            --black: black;
+            --border-radius-normal: 10px;
+            --white: white;
+            --brand-color: yellow;
+            --sans: Montserrat, sans-serif;
+        }
+
+        .title-content-gap {
+            column-gap: 30px;
+            row-gap: 30px;
+            justify-content: flex-start;
+            align-items: stretch;
+            display: flex;
+            flex-flow: column;
+        }
+
+        .title-container {
+            column-gap: 3px;
+            row-gap: 3px;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+        }
+
+        h2 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            unicode-bidi: isolate;
+        }
+
+        .title-8 {
+            font-family: var(--primary);
+            color: var(--black);
+            text-transform: uppercase;
+            border-bottom-style: none;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+
+        .map_container {
+            column-gap: 16px;
+            row-gap: 16px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            display: flex;
+            border-radius: var(--border-radius-normal);
+            flex-flow: column;
+            overflow: hidden;
+        }
+
+        .map_embed {
+            width: 100%;
+        }
+
+        .w-embed::before,
+        .w-embed::after {
+            content: " ";
+            display: table;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            grid-column-end: 2;
+            grid-row-end: 2;
+        }
+
+        .w-embed::after {
+            clear: both;
+        }
+
+        .w-embed::before,
+        .w-embed::after {
+            content: " ";
+            display: table;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            grid-column-end: 2;
+            grid-row-end: 2;
+        }
+
+        /* .title-8 - Media queries */
+        @media screen and (min-width:1280px) {
+
+            .results_grid-4-columns .result .title-8,
+            .profile_resources-grid .result .title-8 {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+        @media screen and (max-width:479px) {
+
+            .results_grid-4-columns .result .title-8,
+            .profile_resources-grid .result .title-8 {
+                font-size: 15px;
+                line-height: 21px;
+            }
+        }
+
+        /* .map / .map_container - Media queries */
+        @media screen and (min-width:1280px) {
+            .map-facetas_component.open-results .map-facetas_container {
+                width: calc(100% - 600px);
+            }
+        }
+
+        @media (max-width:767px) {
+            .map-facetas_component.open-results .map-facetas_container {
+                width: calc(100% - 300px);
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .itinerary_list-map-container iframe {
+                height: 240px;
+            }
+
+            .map-facetas_component.is-itinerary .map-facetas_filters {
+                width: 100%;
+                max-width: 450px;
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            body.is-fav-map .map-facetas_filters-row {
+                flex-flow: row;
+            }
+        }
+
+        @media screen and (min-width:1280px) {
+            body.is-fav-map .header_logo {
+                padding-bottom: 33px;
+            }
+        }
+
+        @media screen and (max-width:479px) {
+            body.is-fav-map .header_logo {
+                padding-bottom: 20px;
+            }
+        }
+
+        /* STOP Seccion map */
+
+
+        /* START Section Tabs Sliders*/
+
+        .block-segittur-graphql-block .button-more {
+            margin-right: 36vw !important;
+        }
+
+        h3.text-h3-text-size.leading-120.font-semibold.text-black.normal-case {
+            color: black;
+            border-bottom-style: none;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            font-size: 20px !important;
+            font-weight: 600;
+            line-height: 26px;
+            text-transform: uppercase !important;
+        }
+
+        /* STOP Section Tabs Sliders*/
+    </style>
 </div>
