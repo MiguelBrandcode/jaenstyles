@@ -9,7 +9,9 @@ jaenstyles/
 ├── theme.css               # Estilos globales compartidos configurador en theme settings
 ├── comoponentstyles.html   # Boilerplate base para nuevos bloques de sección
 └── nombrelanding/
-    └── nombrebloque.html     # Estilos de sección
+    └── nombrebloque.html   # Estilos de sección
+└── nombrecontenido/
+    └── contenido.html     # Estilos de ficha de contenido
 ```
 
 **Convención:**
@@ -94,3 +96,9 @@ Variables globales actuales (definidas en `theme.css`):
 ## theme.css
 
 Contiene los estilos base que afectan a todas las landings: header, comportamiento de scroll, primera sección, etc. No incluir aquí estilos específicos de una sección concreta; para eso usar el `.html` correspondiente dentro de la carpeta de la landing.
+
+---
+
+## Bloques con `contenido-x`
+
+Cuando un archivo `.html` de bloque tiene como selector principal una clase del tipo `contenido-x` (por ejemplo `.contenido-destino`, `.contenido-noticia`), significa que el CSS de ese archivo corresponde a la **ficha** de ese tipo de contenido (la página de detalle), pero aplicado únicamente dentro de los bloques donde aparece ese contenido. Es decir, los estilos van acotados a ese contexto de bloque y no afectan al resto de la página.
