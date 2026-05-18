@@ -3,8 +3,7 @@
 
 /* #block-segittur-segitturstaticfreehtmlblock-2  -- Bloque HTML Header Empieza tu viaje */
 
-body:not(.user-logged-in) .block:has(#edition-block),
-body:not(.user-logged-in) .block-segittur-segitturstatictext:has(#edition-block) {
+body:not(.user-logged-in) .block:has(#edition-block) {
   display: none;
 }
 
@@ -13,6 +12,16 @@ body:not(.user-logged-in) .block-segittur-segitturstatictext:has(#edition-block)
 :root {
   --white: #fff;
   --black: #000;
+}
+
+/* breadcrumbs */
+
+#block-segittur-breadcrumbs {
+  position: absolute;
+  top: 85px;
+  left: auto;
+  z-index: 99;
+  filter: invert(1);
 }
 
 /*START Header*/
@@ -137,4 +146,3 @@ body:not(.scrolled) nav #segittur-header.open .language button > svg {
 }
 
 /*Firt Section To top*/
-
