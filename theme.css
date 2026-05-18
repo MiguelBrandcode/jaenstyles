@@ -24,6 +24,10 @@ body:not(.user-logged-in) .block:has(#edition-block) {
   filter: invert(1);
 }
 
+body.user-logged-in #block-segittur-breadcrumbs  {
+  display: none;
+}
+
 /*START Header*/
 
 body:not(.user-logged-in):not(.path-segittur-search) #page > header {
