@@ -14,6 +14,20 @@ body:not(.user-logged-in) .block:has(#edition-block) {
   --black: #000;
 }
 
+/* breadcrumbs */
+
+#block-segittur-breadcrumbs {
+  position: absolute;
+  top: 85px;
+  left: auto;
+  z-index: 99;
+  filter: invert(1);
+}
+
+body.user-logged-in #block-segittur-breadcrumbs  {
+  display: none;
+}
+
 /*START Header*/
 
 body:not(.user-logged-in):not(.path-segittur-search) #page > header {
@@ -136,4 +150,3 @@ body:not(.scrolled) nav #segittur-header.open .language button > svg {
 }
 
 /*Firt Section To top*/
-
