@@ -24,7 +24,7 @@ body:not(.user-logged-in) .block:has(#edition-block) {
   filter: invert(1);
 }
 
-@media (max-width: 540px) {
+@media (max-width: 575px) {
   #block-segittur-breadcrumbs {
     margin-left: 20px;
   }
