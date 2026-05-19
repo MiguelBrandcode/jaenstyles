@@ -102,3 +102,29 @@ Contiene los estilos base que afectan a todas las landings: header, comportamien
 ## Bloques con `contenido-x`
 
 Cuando un archivo `.html` de bloque tiene como selector principal una clase del tipo `contenido-x` (por ejemplo `.contenido-destino`, `.contenido-noticia`), significa que el CSS de ese archivo corresponde a la **ficha** de ese tipo de contenido (la página de detalle), pero aplicado únicamente dentro de los bloques donde aparece ese contenido. Es decir, los estilos van acotados a ese contexto de bloque y no afectan al resto de la página.
+
+---
+
+## Aplicar CSS solo a una fila con clase específica
+
+En el CMS, las filas del layout pueden tener clases personalizadas asignadas desde la configuración de la fila. Para que un estilo aplique **únicamente a esa fila**, se usa esa clase como selector padre.
+
+**Cómo obtener la clase de la fila:**
+1. En la administración del layout, editar la fila y copiar la clase personalizada asignada (ej: `mi-clase-fila`).
+2. Usar esa clase como prefijo en todos los selectores CSS del bloque.
+
+**Ejemplo:**
+
+```css
+/* Sin acotar a la fila — afecta a todos los elementos .card de la página */
+.card {
+  background: red;
+}
+
+/* Acotado a la fila con clase .mi-clase-fila — solo afecta dentro de esa fila */
+.mi-clase-fila .card {
+  background: red;
+}
+```
+
+De este modo los estilos no se filtran a otras filas o secciones que contengan los mismos elementos.
