@@ -24,7 +24,13 @@ body:not(.user-logged-in) .block:has(#edition-block) {
   filter: invert(1);
 }
 
-body.user-logged-in #block-segittur-breadcrumbs  {
+@media (max-width: 540px) {
+  #block-segittur-breadcrumbs {
+    margin-left: 20px;
+  }
+}
+
+body.user-logged-in #block-segittur-breadcrumbs {
   display: none;
 }
 
