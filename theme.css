@@ -156,3 +156,11 @@ body:not(.scrolled) nav #segittur-header.open .language button > svg {
 }
 
 /*Firt Section To top*/
+
+/* START Fichas geneneral */
+
+.path-resource .resource-header {
+  filter: brightness(0.8);
+}
+
+/* STOP Fichas geneneral */
