@@ -3,7 +3,7 @@
 
 /* #block-segittur-segitturstaticfreehtmlblock-2  -- Bloque HTML Header Empieza tu viaje */
 
-body:not(.user-logged-in) .block:has(#edition-block) {
+body:not(.user-logged-in) section.block:has(#edition-block) {
   display: none;
 }
 
