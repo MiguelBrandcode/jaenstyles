@@ -126,6 +126,22 @@
       display: none !important;
     }
 
+    /* "Todo(s)": estilo botón negro como home-documents_view-all-link */
+    .page-node-1295 .layout.row:has(.contigo) .tab-item[data-value=""] {
+      background-color: #000 !important;
+      color: #fff !important;
+      border-radius: 10px !important;
+      padding-left: 20px !important;
+      margin-bottom: 20px;
+    }
+    .page-node-1295 .layout.row:has(.contigo) .tab-item[data-value=""]::before {
+      display: none !important;
+    }
+    .page-node-1295 .layout.row:has(.contigo) .tab-item[data-value=""]:hover {
+      background-color: #ffff00 !important;
+      color: #000 !important;
+    }
+
     /* ── Grid de cards: 4 columnas en el espacio restante ── */
     .page-node-1295 .layout.row:has(.contigo) .grid {
       flex: 1;
@@ -137,12 +153,27 @@
       align-items: start;
     }
 
+    /* ── Grid: misma altura en todas las cards ── */
+    .page-node-1295 .layout.row:has(.contigo) .grid {
+      align-items: stretch !important;
+    }
+
     /* ── Cards: portrait, sombra, sin borde extra ── */
     .page-node-1295 .layout.row:has(.contigo) article {
       background-color: #fff;
       text-decoration: none;
       box-shadow: 0 0 14px rgba(0,0,0,.1);
-      display: block;
+      display: flex;
+      flex-direction: column;
+    }
+    .page-node-1295 .layout.row:has(.contigo) article > a {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      text-decoration: none;
+    }
+    .page-node-1295 .layout.row:has(.contigo) article > a > div {
+      flex: 1;
     }
 
     /* Imagen en portrait (como documento/folleto) */
@@ -176,7 +207,7 @@
       font-family: 'Montserrat', sans-serif !important;
       color: #000 !important;
       font-size: 18px !important;
-      font-weight: 600 !important;
+      font-weight: 400 !important;
       line-height: 24px !important;
       margin: 0 !important;
       padding: 0 !important;

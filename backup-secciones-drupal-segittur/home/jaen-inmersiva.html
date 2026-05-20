@@ -6,26 +6,30 @@
 
     /* ── Sección: mínimo alto + padding + overlay oscuro ── */
     .page-node-1295 .layout.row:has(.row-inmersirva) section.destinationexperience {
-      background-color: rgba(0,0,0,.42) !important;
-      padding-top: 80px !important;
-      padding-bottom: 100px !important;
+      background-color: rgba(0, 0, 0, .42) !important;
       min-height: calc(100vh - 180px);
       display: flex !important;
       flex-direction: column;
       align-items: center;
       overflow: visible;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-width: unset;
     }
 
     /* ── Cabecera: título blanco centrado ── */
     .page-node-1295 .layout.row:has(.row-inmersirva) .flex.items-center.flex-wrap {
       justify-content: center !important;
     }
+
     .page-node-1295 .layout.row:has(.row-inmersirva) header.w-full {
       width: 100% !important;
       text-align: center;
       padding: 0 !important;
       margin: 0 0 40px !important;
     }
+
     .page-node-1295 .layout.row:has(.row-inmersirva) h2.block-title {
       font-family: 'Montserrat', sans-serif !important;
       color: #fff !important;
@@ -35,7 +39,7 @@
       text-align: center;
       margin: 0 !important;
       padding: 0 !important;
-      text-shadow: 0 4px 8px rgba(0,0,0,.5);
+      text-shadow: 0 4px 8px rgba(0, 0, 0, .5);
     }
 
     /* ── Grid ── */
@@ -45,14 +49,21 @@
       padding-bottom: 0 !important;
       width: 100%;
       align-items: stretch;
+      max-width: 1400px;
     }
 
     @media (max-width: 1300px) {
-      .page-node-1295 .layout.row:has(.row-inmersirva) .grid { grid-template-columns: repeat(3, 1fr) !important; }
+      .page-node-1295 .layout.row:has(.row-inmersirva) .grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
     }
+
     @media (max-width: 1000px) {
-      .page-node-1295 .layout.row:has(.row-inmersirva) .grid { grid-template-columns: repeat(2, 1fr) !important; }
+      .page-node-1295 .layout.row:has(.row-inmersirva) .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
     }
+
     @media (max-width: 700px) {
       .page-node-1295 .layout.row:has(.row-inmersirva) .grid {
         grid-template-columns: 1fr !important;
@@ -70,9 +81,10 @@
       display: flex !important;
       flex-direction: column;
       cursor: pointer;
+      min-height: 350px;
     }
 
-    .page-node-1295 .layout.row:has(.row-inmersirva) article > a {
+    .page-node-1295 .layout.row:has(.row-inmersirva) article>a {
       display: flex !important;
       flex-direction: column;
       flex: 1;
@@ -114,7 +126,7 @@
     }
 
     /* Descripción */
-    .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid > div:not(:last-child) {
+    .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid>div:not(:last-child) {
       font-family: 'Montserrat', sans-serif !important;
       color: #000 !important;
       font-size: 16px !important;
@@ -129,7 +141,7 @@
     }
 
     /* ── Botón amarillo "Descubre" (reemplaza al chevron) ── */
-    .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid > div:last-child {
+    .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid>div:last-child {
       background-color: #ffff00 !important;
       border-radius: 10px !important;
       padding: 7px 16px 7px 12px !important;
@@ -141,7 +153,7 @@
       transition: background-color .2s;
     }
 
-    .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid > div:last-child::before {
+    .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid>div:last-child::before {
       content: 'Descubre';
       font-family: 'Montserrat', sans-serif;
       font-size: 14px;
@@ -152,50 +164,97 @@
     }
 
     /* Flecha →  (reemplaza el SVG) */
-    .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid > div:last-child::after {
+    /* .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid > div:last-child::after {
       content: '→';
       font-size: 16px;
       font-weight: 600;
       color: #000;
       transition: transform .2s;
-    }
+    } */
 
     /* Ocultar SVG original */
-    .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid > div:last-child svg {
+    .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid>div:last-child svg {
       display: none !important;
     }
 
     /* Hover: botón oscurece levemente, flecha se mueve */
-    .page-node-1295 .layout.row:has(.row-inmersirva) article:hover .absolute-item-grid > div:last-child {
+    /* .page-node-1295 .layout.row:has(.row-inmersirva) article:hover .absolute-item-grid > div:last-child {
       background-color: #e6e600 !important;
     }
     .page-node-1295 .layout.row:has(.row-inmersirva) article:hover .absolute-item-grid > div:last-child::after {
       transform: translateX(5px);
-    }
+    } */
 
     /* ── 1280px+ ── */
     @media (min-width: 1280px) {
-      .page-node-1295 .layout.row:has(.row-inmersirva) h2.block-title      { font-size: 60px !important; line-height: 70px !important; }
-      .page-node-1295 .layout.row:has(.row-inmersirva) section.destinationexperience { padding-top: 100px !important; padding-bottom: 120px !important; }
-      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid { padding: 30px 20px 22px !important; gap: 18px !important; }
-      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid h3 { font-size: 24px !important; line-height: 28px !important; }
-      .page-node-1295 .layout.row:has(.row-inmersirva) .grid                { gap: 2.5% !important; }
+      .page-node-1295 .layout.row:has(.row-inmersirva) h2.block-title {
+        font-size: 60px !important;
+        line-height: 70px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.row-inmersirva) section.destinationexperience {
+        padding-top: 100px !important;
+        padding-bottom: 120px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid {
+        padding: 30px 20px 22px !important;
+        gap: 18px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid h3 {
+        font-size: 24px !important;
+        line-height: 28px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.row-inmersirva) .grid {
+        gap: 2.5% !important;
+      }
     }
 
     /* ── max 991px ── */
     @media (max-width: 991px) {
-      .page-node-1295 .layout.row:has(.row-inmersirva) h2.block-title      { font-size: 38px !important; line-height: 46px !important; }
-      .page-node-1295 .layout.row:has(.row-inmersirva) section.destinationexperience { padding-top: 60px !important; padding-bottom: 80px !important; min-height: 70vh; }
-      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid h3 { font-size: 20px !important; line-height: 24px !important; }
-      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid { padding: 22px 16px 16px !important; }
+      .page-node-1295 .layout.row:has(.row-inmersirva) h2.block-title {
+        font-size: 38px !important;
+        line-height: 46px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.row-inmersirva) section.destinationexperience {
+        padding-top: 60px !important;
+        padding-bottom: 80px !important;
+        min-height: 70vh;
+      }
+
+      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid h3 {
+        font-size: 20px !important;
+        line-height: 24px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid {
+        padding: 22px 16px 16px !important;
+      }
     }
 
     /* ── max 767px ── */
     @media (max-width: 767px) {
-      .page-node-1295 .layout.row:has(.row-inmersirva) h2.block-title      { font-size: 28px !important; line-height: 36px !important; }
-      .page-node-1295 .layout.row:has(.row-inmersirva) section.destinationexperience { padding-top: 50px !important; padding-bottom: 60px !important; }
-      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid h3 { font-size: 18px !important; line-height: 22px !important; }
-      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid > div:not(:last-child) { font-size: 15px !important; }
+      .page-node-1295 .layout.row:has(.row-inmersirva) h2.block-title {
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.row-inmersirva) section.destinationexperience {
+        padding-top: 50px !important;
+        padding-bottom: 60px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid h3 {
+        font-size: 18px !important;
+        line-height: 22px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.row-inmersirva) .absolute-item-grid>div:not(:last-child) {
+        font-size: 15px !important;
+      }
     }
 
     /* Jaén inmersiva */
