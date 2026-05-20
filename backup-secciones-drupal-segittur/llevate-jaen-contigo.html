@@ -1,0 +1,233 @@
+<div id="edition-block" class="contigo">
+  <style>
+    /* START IDS: */
+    /* .page-node-1295 - Home */
+    /* STOP IDS: */
+
+    /* ── Sección: márgenes globales ── */
+    .page-node-1295 .layout.row:has(.contigo) {
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .page-node-1295 .layout.row:has(.contigo) section.hotel {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    /* ── Fila del título: lado a lado ── */
+    .page-node-1295 .layout.row:has(.contigo) div:has(> .home-documents_title-row-column) {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 5%;
+      margin-bottom: 30px;
+    }
+    .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-column.is-left {
+      width: 42% !important;
+      flex: 0 0 42%;
+    }
+    .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-column.is-right {
+      width: 52% !important;
+      flex: 0 0 52%;
+    }
+    .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-title {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 30px !important;
+      font-weight: 500 !important;
+      line-height: 35px !important;
+      color: #000 !important;
+      margin: 0 !important;
+    }
+    .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-text {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 20px !important;
+      font-weight: 400 !important;
+      line-height: 26px !important;
+      color: #000 !important;
+      margin: 0 !important;
+    }
+
+    /* ── Línea divisoria + layout tabs+cards ── */
+    .page-node-1295 .layout.row:has(.contigo) .overflow-hidden {
+      border-top: 1px solid #d9d9d9;
+      padding-top: 25px;
+    }
+
+    .page-node-1295 .layout.row:has(.contigo) .dynamic > div {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 4%;
+    }
+
+    /* Ocultar cabecera vacía y filtro de búsqueda */
+    .page-node-1295 .layout.row:has(.contigo) .dynamic > div > .filter-order,
+    .page-node-1295 .layout.row:has(.contigo) .dynamic > div > div:first-of-type {
+      display: none !important;
+    }
+
+    /* ── Sidebar de tabs: 22% ── */
+    .page-node-1295 .layout.row:has(.contigo) .complementary-tabs {
+      width: 22%;
+      flex-shrink: 0;
+      position: sticky;
+      top: 95px;
+    }
+    .page-node-1295 .layout.row:has(.contigo) .complementary-tabs > div {
+      border-bottom: none !important;
+      margin-bottom: 0 !important;
+    }
+    .page-node-1295 .layout.row:has(.contigo) .complementary-tabs [data-role="tabs-one"] {
+      flex-direction: column !important;
+      gap: 0 !important;
+      overflow: visible !important;
+      border-bottom: none !important;
+    }
+
+    /* Tab links: bullet + texto uppercase */
+    .page-node-1295 .layout.row:has(.contigo) .tab-item {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 20px !important;
+      font-weight: 400 !important;
+      line-height: 25px !important;
+      text-transform: uppercase !important;
+      color: #000 !important;
+      padding: 6px 6px 6px 26px !important;
+      text-align: left !important;
+      background: transparent !important;
+      border: none !important;
+      position: relative;
+      white-space: normal !important;
+      display: block !important;
+      width: 100%;
+    }
+
+    /* Bullet circular gris */
+    .page-node-1295 .layout.row:has(.contigo) .tab-item::before {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #b2b2b2;
+    }
+
+    /* Tab activo: bullet negro */
+    .page-node-1295 .layout.row:has(.contigo) .tab-item.active::before {
+      background-color: #000;
+    }
+
+    /* Ocultar indicador de línea inferior (no aplica en vertical) */
+    .page-node-1295 .layout.row:has(.contigo) .tab-item::after {
+      display: none !important;
+    }
+
+    /* ── Grid de cards: 4 columnas en el espacio restante ── */
+    .page-node-1295 .layout.row:has(.contigo) .grid {
+      flex: 1;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 1.66% 1.66% !important;
+      row-gap: 25px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      align-items: start;
+    }
+
+    /* ── Cards: portrait, sombra, sin borde extra ── */
+    .page-node-1295 .layout.row:has(.contigo) article {
+      background-color: #fff;
+      text-decoration: none;
+      box-shadow: 0 0 14px rgba(0,0,0,.1);
+      display: block;
+    }
+
+    /* Imagen en portrait (como documento/folleto) */
+    .page-node-1295 .layout.row:has(.contigo) article figure {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 140% !important;
+      height: 0 !important;
+      position: relative !important;
+      overflow: hidden !important;
+      border-radius: 0 !important;
+    }
+    .page-node-1295 .layout.row:has(.contigo) article figure img {
+      position: absolute !important;
+      top: 0 !important; left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+      transition: transform .2s ease !important;
+    }
+    .page-node-1295 .layout.row:has(.contigo) article:hover figure img {
+      transform: scale(1.05) !important;
+    }
+
+    /* Título bajo la imagen */
+    .page-node-1295 .layout.row:has(.contigo) article > a > div {
+      background-color: #fff;
+      padding: 13px 15px 15px !important;
+    }
+    .page-node-1295 .layout.row:has(.contigo) article h3 {
+      font-family: 'Montserrat', sans-serif !important;
+      color: #000 !important;
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      line-height: 24px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-transform: none !important;
+    }
+
+    /* Ocultar badge (el nombre ya está en el título) */
+    .page-node-1295 .layout.row:has(.contigo) article blockquote {
+      display: none !important;
+    }
+
+    /* ── 1280px+ ── */
+    @media (min-width: 1280px) {
+      .page-node-1295 .layout.row:has(.contigo)                         { margin-top: 140px; margin-bottom: 140px; }
+      .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-title { font-size: 35px !important; line-height: 40px !important; }
+      .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-text  { font-size: 22px !important; line-height: 28px !important; }
+      .page-node-1295 .layout.row:has(.contigo) .complementary-tabs     { width: 25%; }
+      .page-node-1295 .layout.row:has(.contigo) .tab-item               { font-size: 25px !important; line-height: 30px !important; padding: 9px 9px 9px 30px !important; }
+      .page-node-1295 .layout.row:has(.contigo) .tab-item::before       { width: 14px; height: 14px; }
+    }
+
+    /* ── max 991px: título en columna, tabs horizontal ── */
+    @media (max-width: 991px) {
+      .page-node-1295 .layout.row:has(.contigo)                         { margin-top: 70px; margin-bottom: 70px; }
+      .page-node-1295 .layout.row:has(.contigo) div:has(> .home-documents_title-row-column) { flex-direction: column !important; gap: 12px; }
+      .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-column.is-left,
+      .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-column.is-right   { width: 100% !important; flex: unset; }
+      .page-node-1295 .layout.row:has(.contigo) .dynamic > div          { flex-direction: column !important; }
+      .page-node-1295 .layout.row:has(.contigo) .complementary-tabs     { width: 100%; position: static; }
+      .page-node-1295 .layout.row:has(.contigo) .complementary-tabs [data-role="tabs-one"] { flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto !important; gap: 0 !important; padding-bottom: 8px; }
+      .page-node-1295 .layout.row:has(.contigo) .tab-item               { font-size: 17px !important; line-height: 22px !important; padding: 4px 15px !important; white-space: nowrap !important; }
+      .page-node-1295 .layout.row:has(.contigo) .tab-item::before       { display: none !important; }
+      .page-node-1295 .layout.row:has(.contigo) .grid                   { grid-template-columns: repeat(3, 1fr) !important; }
+    }
+
+    /* ── max 767px ── */
+    @media (max-width: 767px) {
+      .page-node-1295 .layout.row:has(.contigo)                         { margin-top: 70px; margin-bottom: 70px; }
+      .page-node-1295 .layout.row:has(.contigo) .tab-item               { font-size: 15px !important; }
+      .page-node-1295 .layout.row:has(.contigo) .grid                   { grid-template-columns: repeat(2, 1fr) !important; }
+      .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-text  { font-size: 16px !important; line-height: 22px !important; }
+      .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-title { font-size: 25px !important; line-height: 30px !important; }
+    }
+
+    /* ── max 479px ── */
+    @media (max-width: 479px) {
+      .page-node-1295 .layout.row:has(.contigo)                         { margin-top: 50px; margin-bottom: 50px; }
+      .page-node-1295 .layout.row:has(.contigo) .home-documents_title-row-title { font-size: 20px !important; line-height: 25px !important; }
+      .page-node-1295 .layout.row:has(.contigo) .grid                   { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+
+    /* Llévate Jaén contigo */
+  </style>
+</div>

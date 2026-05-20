@@ -1,0 +1,179 @@
+<!-- ============================================================
+  BLOQUE DRUPAL: Newsletter
+  Autocontenido: HTML + CSS en un único bloque, sin JS.
+  · Actualiza action="" con la URL de suscripción de tu Drupal
+============================================================ -->
+
+<style>
+
+  #jaen-newsletter {
+    --nl-font:   'Montserrat', sans-serif;
+    --nl-black:  #000;
+    --nl-yellow: #ffff00;
+    --nl-white:  #fff;
+    --nl-border: #d9d9d9;
+    --nl-grey:   #6b6b6b;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  #jaen-newsletter *, #jaen-newsletter *::before, #jaen-newsletter *::after {
+    box-sizing: inherit;
+  }
+
+  /* Sección */
+  #jaen-newsletter .nl-section {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  /* Padding y contenedor */
+  #jaen-newsletter .nl-padding {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #jaen-newsletter .nl-container {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Bloque interior */
+  #jaen-newsletter .nl-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+  }
+
+  /* Título */
+  #jaen-newsletter .nl-title {
+    font-family: var(--nl-font);
+    color: var(--nl-black);
+    margin: 0;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+
+  /* Wrapper del formulario */
+  #jaen-newsletter .nl-form-wrap {
+    width: 100%;
+    max-width: 560px;
+    margin-top: 25px;
+  }
+
+  /* Formulario: cápsula con sombra */
+  #jaen-newsletter .nl-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid var(--nl-border);
+    border-radius: 75px;
+    padding: 4px 4px 4px 18px;
+    font-family: var(--nl-font);
+    font-size: 16px;
+    line-height: 20px;
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    background: var(--nl-white);
+    gap: 8px;
+  }
+
+  /* Input email */
+  #jaen-newsletter .nl-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: var(--nl-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--nl-black);
+    min-width: 0;
+  }
+  #jaen-newsletter .nl-input::placeholder {
+    color: var(--nl-grey);
+  }
+
+  /* Botón "Suscribirse": píldora amarilla con texto */
+  #jaen-newsletter .nl-submit {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 40px;
+    background-color: var(--nl-yellow);
+    font-family: var(--nl-font);
+    color: var(--nl-black);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    padding: 8px 18px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color .2s, color .2s;
+  }
+  #jaen-newsletter .nl-submit:hover {
+    background-color: var(--nl-black);
+    color: var(--nl-white);
+  }
+
+  /* ── Breakpoints ── */
+  @media (min-width: 1280px) {
+    #jaen-newsletter .nl-section   { margin-top: 100px; margin-bottom: 100px; }
+    #jaen-newsletter .nl-title     { font-size: 35px; line-height: 43px; }
+    #jaen-newsletter .nl-padding   { padding-left: 50px; padding-right: 50px; }
+    #jaen-newsletter .nl-form      { font-size: 18px; line-height: 22px; }
+    #jaen-newsletter .nl-input     { font-size: 18px; line-height: 22px; }
+    #jaen-newsletter .nl-submit    { font-size: 14px; padding: 10px 22px; }
+  }
+
+  @media (max-width: 991px) {
+    #jaen-newsletter .nl-section   { margin-top: 70px; margin-bottom: 70px; }
+    #jaen-newsletter .nl-title     { font-size: 28px; line-height: 36px; }
+  }
+
+  @media (max-width: 767px) {
+    #jaen-newsletter .nl-padding   { padding-left: 30px; padding-right: 30px; }
+    #jaen-newsletter .nl-title     { font-size: 25px; line-height: 32px; }
+    #jaen-newsletter .nl-section   { margin-top: 50px; margin-bottom: 50px; }
+  }
+
+  @media (max-width: 479px) {
+    #jaen-newsletter .nl-padding   { padding-left: 25px; padding-right: 25px; }
+    #jaen-newsletter .nl-title     { font-size: 22px; line-height: 29px; }
+    #jaen-newsletter .nl-form      { height: 48px; }
+  }
+</style>
+
+<div id="jaen-newsletter">
+  <section class="nl-section">
+    <div class="nl-padding">
+      <div class="nl-container">
+        <div class="nl-inner">
+
+          <h2 class="nl-title">NEWSLETTER</h2>
+
+          <div class="nl-form-wrap">
+            <form class="nl-form"
+                  action=""
+                  method="post"
+                  autocomplete="off">
+              <input class="nl-input"
+                     type="email"
+                     name="newsletter"
+                     placeholder="Correo electrónico"
+                     required>
+              <button class="nl-submit" type="submit">Suscribirse</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
