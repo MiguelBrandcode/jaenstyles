@@ -1,145 +1,247 @@
-<div id="edition-block" class="home-slider">
-  <style>
-    /* START IDS: */
-    /* .page-node-1295 - Home */
-    /* STOP IDS: */
+<div class="home-slider" id="edition-block">
 
-    :root {
-      --white: #fff;
-    }
+    <style>
 
-    /* ── Altura de la sección: replicar 83vh del diseño ── */
-    /* .page-node-1295 .layout.row:has(.home-slider) .full-width-section {
-      height: calc(100vh - 88px);
-    } */
-    .page-node-1295 .layout.row:has(.home-slider) .swiper-slide img {
-      height: 100%;
-    }
+        /* START IDS: */
 
-    /* ── Overlay del texto: centrado vertical como en el diseño ── */
-    .page-node-1295 .layout.row:has(.home-slider) .w-full>div {
-      position: absolute !important;
-      inset: 0 !important;
-      top: -700px !important;
-      max-width: none !important;
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: center !important;
-      text-align: center !important;
-      padding: 0 40px !important;
-      pointer-events: none;
-    }
+        /* .page-node-1295 - Home */
 
-    @media (max-width: 1000px) {
-      .page-node-1295 .layout.row:has(.home-slider) .w-full>div {
-        top: -200px !important;
-      }
-    }
+        /* STOP IDS: */
 
-    /* ── Tipografía compartida ── */
-    .page-node-1295 .layout.row:has(.home-slider) h2,
-    .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--white) !important;
-      margin: 0;
-      text-shadow: 0 4px 4px rgb(0 0 0 / .75);
-    }
+        :root {
 
-    /* ── Título principal ── */
-    .page-node-1295 .layout.row:has(.home-slider) h2 {
-      font-size: 50px !important;
-      font-weight: 500 !important;
-      line-height: 60px !important;
-      padding-bottom: 7px;
-    }
+          --white: #fff;
 
-    /* ── Subtítulo ── */
-    .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
-      font-size: 30px;
-      font-weight: 300;
-      line-height: 35px;
-    }
+        }
 
-    /* ── 1280px+ ── */
-    @media (min-width: 1280px) {
-      .page-node-1295 .layout.row:has(.home-slider) h2 {
-        font-size: 60px !important;
-        line-height: 70px !important;
-        padding-bottom: 9px;
-      }
+        /* ── Altura de la sección: replicar 83vh del diseño ── */
 
-      .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
-        font-size: 35px;
-        line-height: 40px;
-      }
+        /* .page-node-1295 .layout.row:has(.home-slider) .full-width-section {
 
-      /* .page-node-1295 .layout.row:has(.home-slider) .full-width-section {
-        height: calc(100vh - 155px);
-      } */
-    }
+          height: calc(100vh - 88px);
 
-    /* ── 1920px+ ── */
-    @media (min-width: 1920px) {
-      .page-node-1295 .layout.row:has(.home-slider) h2 {
-        font-size: 95px !important;
-        line-height: 95px !important;
-      }
+        } */
 
-      .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
-        font-size: 50px;
-        line-height: 50px;
-      }
-    }
+        .page-node-1295 .layout.row:has(.home-slider) .swiper-slide img {
 
-    /* ── max 991px ── */
-    @media (max-width: 991px) {
-      .page-node-1295 .layout.row:has(.home-slider) h2 {
-        font-size: 42px !important;
-        line-height: 52px !important;
-      }
+          height: 100%;
 
-      .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
-        font-size: 26px;
-        line-height: 30px;
-      }
+        }
 
-      .page-node-1295 .layout.row:has(.home-slider) .w-full>div {
-        padding: 0 30px !important;
-      }
-    }
+        /* ── Overlay del texto: centrado vertical como en el diseño ── */
 
-    /* ── max 767px ── */
-    @media (max-width: 767px) {
-      .page-node-1295 .layout.row:has(.home-slider) h2 {
-        font-size: 34px !important;
-        line-height: 40px !important;
-      }
+        .page-node-1295 .layout.row:has(.home-slider) .w-full>div {
 
-      .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
-        font-size: 22px;
-        line-height: 26px;
-      }
+          position: absolute !important;
 
-      .page-node-1295 .layout.row:has(.home-slider) .w-full>div {
-        padding: 0 20px !important;
-      }
-    }
+          inset: 0 !important;
 
-    /* ── max 479px ── */
-    @media (max-width: 479px) {
-      .page-node-1295 .layout.row:has(.home-slider) h2 {
-        font-size: 28px !important;
-        line-height: 34px !important;
-        padding-bottom: 3px;
-      }
+          top: -700px !important;
 
-      .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
-        font-size: 18px;
-        line-height: 22px;
-      }
-    }
+          max-width: none !important;
 
-    /* Home slider */
-  </style>
+          display: flex !important;
+
+          flex-direction: column !important;
+
+          align-items: center !important;
+
+          justify-content: center !important;
+
+          text-align: center !important;
+
+          padding: 0 40px !important;
+
+          pointer-events: none;
+
+        }
+
+        @media (max-width: 1000px) {
+
+          .page-node-1295 .layout.row:has(.home-slider) .w-full>div {
+
+            top: -200px !important;
+
+          }
+
+        }
+
+        /* ── Tipografía compartida ── */
+
+        .page-node-1295 .layout.row:has(.home-slider) h2,
+
+        .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
+
+          font-family: 'Montserrat', sans-serif;
+
+          color: var(--white) !important;
+
+          margin: 0;
+
+          text-shadow: 0 4px 4px rgb(0 0 0 / .75);
+
+        }
+
+        /* ── Título principal ── */
+
+        .page-node-1295 .layout.row:has(.home-slider) h2 {
+
+          font-size: 50px !important;
+
+          font-weight: 500 !important;
+
+          line-height: 60px !important;
+
+          padding-bottom: 7px;
+
+        }
+
+        /* ── Subtítulo ── */
+
+        .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
+
+          font-size: 30px;
+
+          font-weight: 300;
+
+          line-height: 35px;
+
+        }
+
+        /* ── 1280px+ ── */
+
+        @media (min-width: 1280px) {
+
+          .page-node-1295 .layout.row:has(.home-slider) h2 {
+
+            font-size: 60px !important;
+
+            line-height: 70px !important;
+
+            padding-bottom: 9px;
+
+          }
+
+          .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
+
+            font-size: 35px;
+
+            line-height: 40px;
+
+          }
+
+          /* .page-node-1295 .layout.row:has(.home-slider) .full-width-section {
+
+            height: calc(100vh - 155px);
+
+          } */
+
+        }
+
+        /* ── 1920px+ ── */
+
+        @media (min-width: 1920px) {
+
+          .page-node-1295 .layout.row:has(.home-slider) h2 {
+
+            font-size: 95px !important;
+
+            line-height: 95px !important;
+
+          }
+
+          .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
+
+            font-size: 50px;
+
+            line-height: 50px;
+
+          }
+
+        }
+
+        /* ── max 991px ── */
+
+        @media (max-width: 991px) {
+
+          .page-node-1295 .layout.row:has(.home-slider) h2 {
+
+            font-size: 42px !important;
+
+            line-height: 52px !important;
+
+          }
+
+          .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
+
+            font-size: 26px;
+
+            line-height: 30px;
+
+          }
+
+          .page-node-1295 .layout.row:has(.home-slider) .w-full>div {
+
+            padding: 0 30px !important;
+
+          }
+
+        }
+
+        /* ── max 767px ── */
+
+        @media (max-width: 767px) {
+
+          .page-node-1295 .layout.row:has(.home-slider) h2 {
+
+            font-size: 34px !important;
+
+            line-height: 40px !important;
+
+          }
+
+          .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
+
+            font-size: 22px;
+
+            line-height: 26px;
+
+          }
+
+          .page-node-1295 .layout.row:has(.home-slider) .w-full>div {
+
+            padding: 0 20px !important;
+
+          }
+
+        }
+
+        /* ── max 479px ── */
+
+        @media (max-width: 479px) {
+
+          .page-node-1295 .layout.row:has(.home-slider) h2 {
+
+            font-size: 28px !important;
+
+            line-height: 34px !important;
+
+            padding-bottom: 3px;
+
+          }
+
+          .page-node-1295 .layout.row:has(.home-slider) .text-neutral-200 {
+
+            font-size: 18px;
+
+            line-height: 22px;
+
+          }
+
+        }
+
+        /* Home slider */
+
+      </style>
+
 </div>
