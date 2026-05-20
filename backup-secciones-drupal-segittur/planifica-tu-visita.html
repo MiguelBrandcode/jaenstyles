@@ -1,0 +1,271 @@
+<div id="edition-block" class="planifica">
+  <style>
+    /* START IDS: */
+    /* .page-node-1295 - Home */
+    /* STOP IDS: */
+
+    /* ── Sección: rompe el container Bootstrap para ir a full-width ── */
+    .page-node-1295 .layout.row:has(.planifica) section.event {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 100vw !important;
+      max-width: none !important;
+      margin-left: calc(50% - 50vw) !important;
+      margin-right: calc(50% - 50vw) !important;
+    }
+
+    /* Contenido interior con padding lateral */
+    .page-node-1295 .layout.row:has(.planifica) section.event > div {
+      padding-left: 40px !important;
+      padding-right: 40px !important;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* El bloque de filtros sí ocupa full-width sin max-width */
+    .page-node-1295 .layout.row:has(.planifica) section.filter-order {
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    /* ── Cabecera: título + subtítulo centrados ── */
+    .page-node-1295 .layout.row:has(.planifica) .flex.items-center.flex-wrap {
+      justify-content: center !important;
+    }
+
+    .page-node-1295 .layout.row:has(.planifica) header.w-full {
+      width: 100% !important;
+      text-align: center;
+      padding: 0 !important;
+      margin: 0 0 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .page-node-1295 .layout.row:has(.planifica) h2.block-title {
+      font-family: 'Montserrat', sans-serif !important;
+      color: #000 !important;
+      font-size: 32px !important;
+      font-weight: 500 !important;
+      line-height: 40px !important;
+      text-align: center;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-transform: uppercase;
+    }
+
+    .page-node-1295 .layout.row:has(.planifica) header p {
+      font-family: 'Montserrat', sans-serif !important;
+      color: #000 !important;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      line-height: 22px !important;
+      margin: 0 !important;
+    }
+
+    /* ── Bloque de filtros: fondo blanco con sombra ── */
+    .page-node-1295 .layout.row:has(.planifica) section.filter-order {
+      background-color: #fff !important;
+      box-shadow: 0 5px 4px 2px rgba(0,0,0,.25) !important;
+      padding: 14px 40px !important;
+      margin-bottom: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+    }
+
+    /* Wrapper interior de filtros */
+    .page-node-1295 .layout.row:has(.planifica) section.filter-order > div {
+      display: flex !important;
+      flex-wrap: wrap;
+      gap: 15px !important;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    /* Cada columna de filtro → columna amarilla */
+    .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: flex-start;
+      gap: 8px !important;
+      background-color: #ffff00 !important;
+      border-radius: 10px !important;
+      padding: 18px 20px 22px !important;
+      flex: 1;
+      min-width: 160px;
+    }
+
+    /* Etiqueta del filtro */
+    .page-node-1295 .layout.row:has(.planifica) section.filter-order label {
+      display: block !important;
+      font-family: 'Montserrat', sans-serif !important;
+      color: #000 !important;
+      font-size: 18px !important;
+      font-weight: 700 !important;
+      line-height: 18px !important;
+      text-align: center;
+      margin: 0 !important;
+    }
+
+    /* Input del filtro → píldora blanca */
+    .page-node-1295 .layout.row:has(.planifica) section.filter-order input[type="text"] {
+      font-family: 'Montserrat', sans-serif !important;
+      color: #000 !important;
+      background: #fff !important;
+      border: 1px solid #d9d9d9 !important;
+      border-radius: 40px !important;
+      padding: 7px 25px !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      line-height: 19px !important;
+      text-align: center !important;
+      width: 100% !important;
+      outline: none !important;
+      transition: border-color .2s !important;
+    }
+
+    .page-node-1295 .layout.row:has(.planifica) section.filter-order input[type="text"]:focus {
+      border-color: #000 !important;
+    }
+
+    .page-node-1295 .layout.row:has(.planifica) section.filter-order input::placeholder {
+      color: #b2b2b2 !important;
+    }
+
+    /* ── Grid de cards ── */
+    .page-node-1295 .layout.row:has(.planifica) .grid.grid-cols-1 {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 20px !important;
+      padding-top: 20px !important;
+      padding-bottom: 0 !important;
+    }
+
+    @media (max-width: 991px) and (min-width: 641px) {
+      .page-node-1295 .layout.row:has(.planifica) .grid.grid-cols-1 {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-node-1295 .layout.row:has(.planifica) .grid.grid-cols-1 {
+        grid-template-columns: 1fr !important;
+        max-width: 450px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+
+    /* ── Cards: estilo home-descubre_link ── */
+    .page-node-1295 .layout.row:has(.planifica) article {
+      display: flex !important;
+      flex-direction: column;
+      gap: 15px;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-node-1295 .layout.row:has(.planifica) article > a {
+      display: flex !important;
+      flex-direction: column;
+      gap: 15px;
+      text-decoration: none;
+    }
+
+    /* Contenedor imagen: aspect ratio como home-descubre_image-container */
+    .page-node-1295 .layout.row:has(.planifica) article figure {
+      border-radius: 10px !important;
+      background-color: #000 !important;
+      padding-bottom: calc(100vh - 440px) !important;
+      height: 0 !important;
+      position: relative !important;
+      overflow: hidden !important;
+      margin: 0;
+    }
+
+    .page-node-1295 .layout.row:has(.planifica) article figure img {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+      opacity: .9;
+      transition: transform .3s ease !important;
+      border-radius: 0 !important;
+    }
+
+    .page-node-1295 .layout.row:has(.planifica) article:hover figure img {
+      transform: scale(1.06) !important;
+    }
+
+    /* Título debajo de la imagen */
+    .page-node-1295 .layout.row:has(.planifica) article > a > div {
+      padding: 0 !important;
+      text-align: left;
+    }
+
+    .page-node-1295 .layout.row:has(.planifica) article h3 {
+      font-family: 'Montserrat', sans-serif !important;
+      color: #000 !important;
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      line-height: 26px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-transform: none !important;
+    }
+
+    /* ── 1280px+ ── */
+    @media (min-width: 1280px) {
+      .page-node-1295 .layout.row:has(.planifica) h2.block-title         { font-size: 35px !important; line-height: 43px !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.event          { margin-top: 120px; margin-bottom: 120px; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order   { padding: 14px 50px !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid { gap: 7px !important; padding: 20px 50px 22px !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order label  { font-size: 20px !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order input  { font-size: 16px !important; line-height: 20px !important; }
+      .page-node-1295 .layout.row:has(.planifica) article h3             { font-size: 20px !important; line-height: 28px !important; }
+      .page-node-1295 .layout.row:has(.planifica) article figure         { padding-bottom: calc(100vh - 450px) !important; }
+      .page-node-1295 .layout.row:has(.planifica) .grid.grid-cols-1      { gap: 20px !important; }
+    }
+
+    /* ── max 991px ── */
+    @media (max-width: 991px) {
+      .page-node-1295 .layout.row:has(.planifica) h2.block-title         { font-size: 28px !important; line-height: 36px !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.event          { margin-top: 70px; margin-bottom: 70px; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order   { box-shadow: none !important; background-color: transparent !important; padding: 0 0 24px !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order > div { gap: 2% !important; flex-wrap: wrap; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid { width: 32%; flex: unset; padding: 18px 15px 22px !important; align-items: flex-start !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order input  { font-size: 14px !important; padding: 8px 18px !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order label  { font-size: 16px !important; }
+      .page-node-1295 .layout.row:has(.planifica) article figure         { padding-bottom: 35vh !important; }
+      .page-node-1295 .layout.row:has(.planifica) article h3             { font-size: 16px !important; line-height: 22px !important; }
+    }
+
+    /* ── max 767px ── */
+    @media (max-width: 767px) {
+      .page-node-1295 .layout.row:has(.planifica) h2.block-title         { font-size: 25px !important; line-height: 32px !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.event          { margin-top: 50px; margin-bottom: 50px; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid { width: 100% !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order input  { padding: 10px 22px !important; }
+      .page-node-1295 .layout.row:has(.planifica) article figure         { padding-bottom: 55% !important; }
+    }
+
+    /* ── max 479px ── */
+    @media (max-width: 479px) {
+      .page-node-1295 .layout.row:has(.planifica) h2.block-title         { font-size: 22px !important; line-height: 29px !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid { padding: 16px 15px 18px !important; }
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order label  { font-size: 15px !important; }
+    }
+
+    /* Planifica tu visita */
+  </style>
+</div>
