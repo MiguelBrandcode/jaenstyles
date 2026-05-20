@@ -1,0 +1,146 @@
+<div id="edition-block" class="descubre">
+  <style>
+    /* START IDS: */
+    /* .page-node-1295 - Home */
+    /* STOP IDS: */
+
+    /* ── Sección: márgenes y centrado ── */
+    .page-node-1295 .layout.row:has(.descubre) {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      text-align: center;
+    }
+
+    /* (título: estilos inyectados vía JS al shadow DOM, ver <script> abajo) */
+
+    /* ── Mapa Leaflet: altura y bordes (sin sombra) ── */
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-container {
+      height: 560px !important;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* ── Marcadores: amarillo con icono oscuro ── */
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-marker-icon.map-icon svg {
+      background-color: #ffff00 !important;
+      color: #000 !important;
+      border-radius: 4px;
+    }
+
+    /* ── Popup: negro con texto blanco, acento amarillo ── */
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-popup-content-wrapper {
+      background: #1d1e1c !important;
+      border-radius: 10px !important;
+      box-shadow: 0 6px 20px rgba(0,0,0,.35) !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-popup-content {
+      margin: 14px 18px !important;
+      font-family: 'Montserrat', sans-serif !important;
+    }
+
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-popup-content p {
+      margin: 0 !important;
+    }
+
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-popup-content a {
+      font-family: 'Montserrat', sans-serif !important;
+      color: #ffff00 !important;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      line-height: 20px !important;
+      text-decoration: none !important;
+      display: block;
+    }
+
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-popup-content a:hover {
+      text-decoration: underline !important;
+    }
+
+    /* Triángulo del popup */
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-popup-tip {
+      background: #1d1e1c !important;
+    }
+
+    /* Botón cerrar popup */
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-popup-close-button {
+      color: #fff !important;
+      font-size: 18px !important;
+      padding: 4px 8px !important;
+      top: 4px !important;
+      right: 4px !important;
+    }
+
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-popup-close-button:hover {
+      color: #ffff00 !important;
+      background: transparent !important;
+    }
+
+    /* ── Ocultar controles del mapa (filtro categoría) ── */
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-control-container {
+      display: none !important;
+    }
+
+    /* ── Atribución Leaflet ── */
+    .page-node-1295 .layout.row:has(.descubre) .leaflet-control-attribution {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 10px !important;
+      background: rgba(255,255,255,.75) !important;
+      border-radius: 4px 0 0 0;
+    }
+
+    /* ── 1280px+ ── */
+    @media (min-width: 1280px) {
+      .page-node-1295 .layout.row:has(.descubre)                         { margin-top: 120px; margin-bottom: 120px; }
+      .page-node-1295 .layout.row:has(.descubre) .leaflet-container      { height: 640px !important; }
+    }
+
+    /* ── max 991px ── */
+    @media (max-width: 991px) {
+      .page-node-1295 .layout.row:has(.descubre)                         { margin-top: 70px; margin-bottom: 70px; }
+      .page-node-1295 .layout.row:has(.descubre) .leaflet-container      { height: 450px !important; }
+    }
+
+    /* ── max 767px ── */
+    @media (max-width: 767px) {
+      .page-node-1295 .layout.row:has(.descubre)                         { margin-top: 50px; margin-bottom: 50px; }
+      .page-node-1295 .layout.row:has(.descubre) .leaflet-container      { height: 360px !important; border-radius: 0; }
+    }
+
+    /* Descubre - Nuestros Tesoros */
+  </style>
+
+  <script>
+  (function () {
+    var css = [
+      "@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');",
+      ".home_title-container { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; text-align:center; margin-bottom:30px; }",
+      ".home_title-container .title-3 { font-family:'Montserrat',sans-serif !important; color:#000 !important; margin:0 !important; font-size:32px !important; font-weight:500 !important; line-height:40px !important; }",
+      ".home_title-container .title-2_subtitle { font-family:'Montserrat',sans-serif !important; color:#000 !important; margin:0 !important; padding:0 !important; font-size:22px !important; font-weight:300 !important; line-height:27px !important; }",
+      "@media(min-width:1280px){.home_title-container .title-3{font-size:35px !important;line-height:43px !important}.home_title-container .title-2_subtitle{font-size:25px !important;line-height:30px !important}}",
+      "@media(max-width:991px){.home_title-container .title-3{font-size:28px !important;line-height:36px !important}.home_title-container .title-2_subtitle{font-size:20px !important;line-height:25px !important}}",
+      "@media(max-width:767px){.home_title-container .title-3{font-size:25px !important;line-height:32px !important}.home_title-container .title-2_subtitle{font-size:18px !important;line-height:23px !important}}",
+      "@media(max-width:479px){.home_title-container .title-3{font-size:22px !important;line-height:29px !important}.home_title-container .title-2_subtitle{font-size:16px !important;line-height:21px !important}}"
+    ].join('\n');
+
+    function inject() {
+      document.querySelectorAll('[id^="free-html-block"]').forEach(function (host) {
+        var sr = host.shadowRoot;
+        if (!sr || sr.querySelector('[data-jaen-title]')) return;
+        var s = document.createElement('style');
+        s.setAttribute('data-jaen-title', '1');
+        s.textContent = css;
+        sr.appendChild(s);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', inject);
+    } else {
+      inject();
+    }
+  }());
+  </script>
+</div>
