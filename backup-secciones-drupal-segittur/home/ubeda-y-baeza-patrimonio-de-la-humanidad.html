@@ -1,0 +1,182 @@
+/*  SECCION TEXTO PRINCIPAL CON VIDEO */
+<div class="container">
+
+    <div class="bloque-principal">
+        <h1>Úbeda y Baeza, Patrimonio de la Humanidad</h1>
+
+        <p>
+            Déjate embrujar por dos ciudades repletas de historia, donde el tiempo se detiene y el legado de la
+            piedra le otorga el distintivo de “Patrimonio de la Humanidad”. Iglesia, palacios y museos en un entorno
+            urbano rodeado de paisaje del olivar jiennense definen este destino turístico.
+        </p>
+    </div>
+
+    <div class="bloque-secundario">
+        <p>
+            Las ciudades de Úbeda y Baeza, declaradas Patrimonio de la Humanidad, conservan aquel hechizo de hace
+            500 años y las convierte en el máximo exponente del Renacimiento español. Rodeadas de olivares con el
+            Guadalquivir a sus pies, estas dos ciudades conservan entre sus calles el trazado original de tiempos
+            remotos. Úbeda representa la arquitectura privada y el poder civil, y Baeza la arquitectura pública y el
+            poder religioso. Las dos figuras más destacadas de aquellos tiempos fueron Francisco de los Cobos,
+            secretario de Carlos I, y su arquitecto Andrés de Vandelvira, autor de los más soberbios monumentos de
+            ambas ciudades.
+        </p>
+        <p>
+            La singularidad de Úbeda y Baeza se hace palpable en sus trazados urbanísticos e importantes edificios.
+        </p>
+        <p>
+            El viajero se sumerge en un paseo repleto de historia, un lugar parado en el tiempo, donde la poesía, el
+            legado de la piedra, los sabores del aceite y sus tradiciones, convierten a estas dos ciudades en un
+            legado cultural irrepetible.
+        </p>
+    </div>
+
+    <div class="bloque-video">
+        <iframe
+            src="https://www.youtube.com/embed/dcA0Ny7xsTQ"
+            title="Úbeda y Baeza"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="bloque-enlaces">
+        <a href="#" class="enlace-interactivo">
+            Folleto descargable
+            <svg viewBox="0 0 24 24">
+                <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/>
+            </svg>
+        </a>
+
+        <a href="#" class="enlace-interactivo">
+            Más información
+            <svg viewBox="0 0 24 24">
+                <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+            </svg>
+        </a>
+    </div>
+
+</div>
+
+<style>
+    body {
+    margin: 0;
+    padding: 40px 0;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: calc(1.8rem + 1.5vw);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2.5vw;
+    margin-top: 0;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.bloque-principal p {
+    font-size: calc(0.9rem + 0.5vw);
+    font-weight: 400;
+    line-height: 1.6;
+    color: #1a1a1a;
+    margin: 0 0 4vw 0;
+    text-align: center;
+}
+
+.bloque-secundario,
+.bloque-video,
+.bloque-enlaces {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.bloque-secundario p {
+    font-size: calc(0.8rem + 0.4vw);
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.bloque-secundario p:last-child {
+    margin-bottom: 0;
+}
+
+.bloque-video {
+    margin-top: 4vw;
+}
+
+.bloque-video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
+.bloque-enlaces {
+    margin-top: 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.enlace-interactivo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2c2c2c;
+    font-size: calc(0.75rem + 0.3vw);
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #fdd835;
+    transition: opacity 0.2s ease;
+}
+
+.enlace-interactivo:hover {
+    opacity: 0.7;
+}
+
+.enlace-interactivo svg {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    fill: currentColor;
+}
+
+@media (max-width: 576px) {
+    .bloque-secundario,
+    .bloque-video,
+    .bloque-enlaces {
+        width: 100%;
+    }
+
+    .bloque-enlaces {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+</style>
+
+/* END SECTION */
