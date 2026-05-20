@@ -1,0 +1,301 @@
+<!-- ============================================================
+  BLOQUE DRUPAL: Sostenibilidad - Otra forma de conocer Jaén
+  Autocontenido: HTML + CSS + JS en un único bloque.
+  Actualiza los href de los <a> y las rutas de las imágenes
+  según tu instalación de Drupal.
+============================================================ -->
+
+<style>
+  /* Variables locales al bloque */
+  #jaen-sos {
+    --sos-font: 'Montserrat', sans-serif;
+    --sos-black: #000;
+    --sos-yellow: #ffff00;
+    --sos-white: #fff;
+    box-sizing: border-box;
+    font-family: var(--sos-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  #jaen-sos *, #jaen-sos *::before, #jaen-sos *::after {
+    box-sizing: inherit;
+  }
+
+  /* Layout */
+  #jaen-sos .sos-padding {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #jaen-sos .sos-container {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Cabecera del bloque */
+  #jaen-sos .sos-title-block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    text-align: center;
+  }
+  #jaen-sos .sos-title {
+    font-family: var(--sos-font);
+    color: var(--sos-black);
+    margin: 0;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+  #jaen-sos .sos-subtitle {
+    font-family: var(--sos-font);
+    color: var(--sos-black);
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 27px;
+  }
+
+  /* Sección principal */
+  #jaen-sos .sos-section {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  /* Fila contenedora (barra amarilla + grid) */
+  #jaen-sos .sos-row {
+    margin-top: 20px;
+  }
+  #jaen-sos .sos-bar {
+    background-color: var(--sos-yellow);
+    width: 20%;
+    height: 40px;
+    transition: margin-left 0.2s ease, width 0.2s ease;
+    margin-left: 0;
+  }
+  #jaen-sos .sos-grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5%;
+  }
+
+  /* Cada tarjeta */
+  #jaen-sos .sos-card {
+    display: flex;
+    flex-flow: column;
+    width: 19.1%;
+    gap: 16px;
+    text-decoration: none;
+    transition: width 0.2s ease;
+    overflow: hidden;
+  }
+  /* Indicador amarillo (móvil) */
+  #jaen-sos .sos-card-hover {
+    display: none; /* solo visible en móvil, ver media query */
+    background-color: var(--sos-yellow);
+    opacity: 0;
+    width: 80%;
+    height: 25px;
+    transition: opacity 0.2s;
+  }
+
+  /* Imagen */
+  #jaen-sos .sos-img-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 450px);
+    overflow: hidden;
+  }
+  #jaen-sos .sos-img-wrap img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+
+  /* Texto de la tarjeta */
+  #jaen-sos .sos-card-text {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 3px;
+  }
+  #jaen-sos .sos-card-title {
+    font-family: var(--sos-font);
+    color: var(--sos-black);
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  #jaen-sos .sos-card-desc {
+    font-family: var(--sos-font);
+    color: var(--sos-black);
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  /* ── Breakpoints ──────────────────────────────────────── */
+
+  @media screen and (min-width: 1280px) {
+    #jaen-sos .sos-padding       { padding-left: 50px; padding-right: 50px; }
+    #jaen-sos .sos-title         { font-size: 35px; line-height: 43px; }
+    #jaen-sos .sos-subtitle      { font-size: 25px; line-height: 30px; }
+    #jaen-sos .sos-section       { margin-top: 140px; margin-bottom: 140px; }
+    #jaen-sos .sos-row           { margin-top: 25px; }
+    #jaen-sos .sos-card          { gap: 25px; }
+    #jaen-sos .sos-card-text     { gap: 5px; padding-left: 20px; padding-right: 40px; }
+  }
+
+  @media screen and (min-width: 1920px) {
+    #jaen-sos .sos-bar           { height: 60px; }
+    #jaen-sos .sos-img-wrap      { height: 550px; }
+  }
+
+  @media screen and (max-width: 991px) {
+    #jaen-sos .sos-padding       { padding-left: 35px; padding-right: 35px; }
+    #jaen-sos .sos-title         { font-size: 28px; line-height: 36px; }
+    #jaen-sos .sos-subtitle      { font-size: 20px; line-height: 25px; }
+    #jaen-sos .sos-card-title    { font-size: 16px; line-height: 22px; }
+    #jaen-sos .sos-section       { margin-top: 70px; margin-bottom: 70px; }
+    #jaen-sos .sos-row           { margin-top: 30px; }
+    #jaen-sos .sos-bar           { display: none; }
+    #jaen-sos .sos-grid          { gap: 3% 3%; row-gap: 10px; }
+    #jaen-sos .sos-card          { width: 48.5%; gap: 0; }
+    #jaen-sos .sos-card-text     { padding-top: 20px; padding-left: 20px; padding-right: 20px; }
+    #jaen-sos .sos-card-desc     { font-size: 16px; line-height: 20px; }
+    #jaen-sos .sos-card-hover    { display: block; }
+    #jaen-sos .sos-card:hover .sos-card-hover { opacity: 1; }
+  }
+
+  @media screen and (max-width: 767px) {
+    #jaen-sos .sos-padding       { padding-left: 30px; padding-right: 30px; }
+    #jaen-sos .sos-title         { font-size: 25px; line-height: 32px; }
+    #jaen-sos .sos-card-title    { font-size: 15px; line-height: 21px; }
+    #jaen-sos .sos-title-block   { justify-content: space-around; }
+    #jaen-sos .sos-section       { margin-top: 50px; margin-bottom: 50px; }
+    #jaen-sos .sos-row           { margin-top: 20px; }
+    #jaen-sos .sos-grid          { row-gap: 9px; }
+    #jaen-sos .sos-img-wrap      { height: 45vh; }
+    #jaen-sos .sos-card-text     { padding-top: 15px; padding-left: 15px; padding-right: 15px; }
+    #jaen-sos .sos-card-desc     { font-size: 15px; line-height: 19px; }
+  }
+
+  @media screen and (max-width: 479px) {
+    #jaen-sos .sos-padding       { padding-left: 25px; padding-right: 25px; }
+    #jaen-sos .sos-title         { font-size: 22px; line-height: 29px; }
+    #jaen-sos .sos-img-wrap      { height: 40vh; }
+    #jaen-sos .sos-card-hover    { height: 15px; }
+  }
+
+  /* ── Interacción desktop: pure CSS con :has() ────────────
+     Requiere Chrome 105+, Safari 15.4+, Firefox 121+        */
+  @media screen and (min-width: 992px) {
+    /* Estado base: primera tarjeta ancha */
+    #jaen-sos .sos-card:nth-child(1)                                              { width: 38.2%; }
+
+    /* Al hacer hover en una tarjeta que NO es la primera, la primera se colapsa */
+    #jaen-sos .sos-grid:has(.sos-card:not(:nth-child(1)):hover) .sos-card:nth-child(1) { width: 19.1%; }
+
+    /* La tarjeta que recibe hover se expande */
+    #jaen-sos .sos-card:hover                                                     { width: 38.2%; }
+
+    /* Posición de la barra amarilla según la tarjeta activa */
+    #jaen-sos .sos-row:has(.sos-card:nth-child(2):hover) .sos-bar { margin-left: 23.6%; }
+    #jaen-sos .sos-row:has(.sos-card:nth-child(3):hover) .sos-bar { margin-left: 44.2%; }
+    #jaen-sos .sos-row:has(.sos-card:nth-child(4):hover) .sos-bar { margin-left: 64.8%; }
+  }
+</style>
+
+<div id="jaen-sos">
+  <section class="sos-section">
+
+    <div class="sos-padding">
+      <div class="sos-container">
+        <div class="sos-title-block">
+          <h2 class="sos-title">SOSTENIBILIDAD</h2>
+          <h3 class="sos-subtitle">OTRA FORMA DE CONOCER JAÉN</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="sos-row">
+      <div class="sos-bar"></div>
+      <div class="sos-grid">
+
+        <a href="#" class="sos-card">
+          <div class="sos-card-hover"></div>
+          <div class="sos-img-wrap">
+            <img src="/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/home-featured-3.jpg"
+                 sizes="100vw"
+                 loading="lazy"
+                 alt="El sabor de la autenticidad">
+          </div>
+          <div class="sos-card-text">
+            <h4 class="sos-card-title">El sabor de la autenticidad</h4>
+            <p class="sos-card-desc">De las tabernas centenarias de &quot;tascas y linares&quot; a las Estrellas Michelin que reinventan nuestra esencia.</p>
+          </div>
+        </a>
+
+        <a href="#" class="sos-card">
+          <div class="sos-card-hover"></div>
+          <div class="sos-img-wrap">
+            <img src="/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/sostenibilidad-2.jpg"
+                 loading="lazy"
+                 alt="Productos de Jaén">
+          </div>
+          <div class="sos-card-text">
+            <h4 class="sos-card-title">Productos de Jaén</h4>
+            <p class="sos-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+          </div>
+        </a>
+
+        <a href="#" class="sos-card">
+          <div class="sos-card-hover"></div>
+          <div class="sos-img-wrap">
+            <img src="/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/sostenibilidad-3.jpg"
+                 loading="lazy"
+                 alt="Jaén accesible">
+          </div>
+          <div class="sos-card-text">
+            <h4 class="sos-card-title">Jaén accesible</h4>
+            <p class="sos-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+          </div>
+        </a>
+
+        <a href="#" class="sos-card">
+          <div class="sos-card-hover"></div>
+          <div class="sos-img-wrap">
+            <img src="/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/sostenibilidad-4.jpg"
+                 loading="lazy"
+                 alt="Actividades sostenibles">
+          </div>
+          <div class="sos-card-text">
+            <h4 class="sos-card-title">Actividades sostenibles</h4>
+            <p class="sos-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+          </div>
+        </a>
+
+      </div><!-- /sos-grid -->
+    </div><!-- /sos-row -->
+
+  </section>
+</div><!-- /jaen-sos -->

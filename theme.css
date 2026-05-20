@@ -3,6 +3,8 @@
 
 /* #block-segittur-segitturstaticfreehtmlblock-2  -- Bloque HTML Header Empieza tu viaje */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
 body:not(.user-logged-in) section.block:has(#edition-block) {
   display: none;
 }

@@ -12,6 +12,7 @@ jaenstyles/
     └── nombrebloque.html   # Estilos de sección
 └── nombrecontenido/
     └── contenido.html     # Estilos de ficha de contenido
+└── backup-secciones-drupal-segittur/ #backups de secciones de segittur por si acaso
 ```
 
 **Convención:**
