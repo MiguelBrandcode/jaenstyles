@@ -43,7 +43,7 @@
 
     /* ── Ocultar navegación ── */
     .page-node-1295 .layout.row:has(.imprescindibles) nav[aria-label="Carousel navigation"],
-    .page-node-1295 .layout.row:has(.imprescindibles) .flex.items-center.flex-wrap > div.relative {
+    .page-node-1295 .layout.row:has(.imprescindibles) .flex.items-center.flex-wrap>div.relative {
       display: none !important;
     }
 
@@ -54,6 +54,10 @@
       background-color: #000 !important;
       position: relative;
       cursor: pointer;
+    }
+
+    .page-node-1295 .layout.row:has(.imprescindibles) article.swiper-slide>a>figure>div {
+      height: 100%;
     }
 
     /* Imagen: contenedor */
@@ -72,7 +76,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.1) 50%, transparent 100%);
+      background: linear-gradient(to top, rgba(0, 0, 0, .65) 0%, rgba(0, 0, 0, .1) 50%, transparent 100%);
       border-radius: 10px;
       pointer-events: none;
     }
@@ -115,42 +119,96 @@
       margin: 0 !important;
       padding: 0 !important;
       text-transform: none !important;
-      text-shadow: 0 2px 8px rgba(0,0,0,.4);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, .4);
     }
 
     /* Ocultar flechita del item */
-    .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid > div {
+    .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid>div {
       display: none !important;
     }
 
     /* ── 1280px+ ── */
     @media (min-width: 1280px) {
-      .page-node-1295 .layout.row:has(.imprescindibles) h2.block-title      { font-size: 35px !important; line-height: 43px !important; }
-      .page-node-1295 .layout.row:has(.imprescindibles) section.destinationexperience { margin-top: 140px; margin-bottom: 140px; }
-      .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid { bottom: 30px !important; padding-left: 30px !important; padding-right: 30px !important; }
-      .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid h3 { font-size: 22px !important; line-height: 28px !important; }
+      .page-node-1295 .layout.row:has(.imprescindibles) h2.block-title {
+        font-size: 35px !important;
+        line-height: 43px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.imprescindibles) section.destinationexperience {
+        margin-top: 140px;
+        margin-bottom: 140px;
+      }
+
+      .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid {
+        bottom: 30px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid h3 {
+        font-size: 22px !important;
+        line-height: 28px !important;
+      }
     }
 
     /* ── max 991px ── */
     @media (max-width: 991px) {
-      .page-node-1295 .layout.row:has(.imprescindibles) h2.block-title      { font-size: 28px !important; line-height: 36px !important; }
-      .page-node-1295 .layout.row:has(.imprescindibles) section.destinationexperience { margin-top: 70px; margin-bottom: 70px; }
+      .page-node-1295 .layout.row:has(.imprescindibles) h2.block-title {
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.imprescindibles) section.destinationexperience {
+        margin-top: 70px;
+        margin-bottom: 70px;
+      }
     }
 
     /* ── max 767px ── */
     @media (max-width: 767px) {
-      .page-node-1295 .layout.row:has(.imprescindibles) h2.block-title      { font-size: 25px !important; line-height: 32px !important; }
-      .page-node-1295 .layout.row:has(.imprescindibles) section.destinationexperience { margin-top: 50px; margin-bottom: 50px; }
-      .page-node-1295 .layout.row:has(.imprescindibles) article.swiper-slide figure  { height: 45vh; min-height: 220px; }
-      .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid h3       { font-size: 18px !important; line-height: 22px !important; }
+      .page-node-1295 .layout.row:has(.imprescindibles) h2.block-title {
+        font-size: 25px !important;
+        line-height: 32px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.imprescindibles) section.destinationexperience {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      .page-node-1295 .layout.row:has(.imprescindibles) article.swiper-slide figure {
+        height: 45vh;
+        min-height: 220px;
+      }
+
+      .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid h3 {
+        font-size: 18px !important;
+        line-height: 22px !important;
+      }
     }
 
     /* ── max 479px ── */
     @media (max-width: 479px) {
-      .page-node-1295 .layout.row:has(.imprescindibles) h2.block-title      { font-size: 22px !important; line-height: 29px !important; }
-      .page-node-1295 .layout.row:has(.imprescindibles) article.swiper-slide figure  { height: 40vh; min-height: 180px; }
-      .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid { bottom: 20px !important; padding-left: 20px !important; padding-right: 20px !important; }
-      .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid h3       { font-size: 16px !important; line-height: 20px !important; }
+      .page-node-1295 .layout.row:has(.imprescindibles) h2.block-title {
+        font-size: 22px !important;
+        line-height: 29px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.imprescindibles) article.swiper-slide figure {
+        height: 40vh;
+        min-height: 180px;
+      }
+
+      .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid {
+        bottom: 20px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.imprescindibles) .absolute-item-grid h3 {
+        font-size: 16px !important;
+        line-height: 20px !important;
+      }
     }
 
     /* Imprescindibles */

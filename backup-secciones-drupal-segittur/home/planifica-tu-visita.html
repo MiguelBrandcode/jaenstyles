@@ -3,26 +3,30 @@
     /* START IDS: */
     /* .page-node-1295 - Home */
     /* STOP IDS: */
+    .page-node-1295 .container:has(.planifica) {
+      width: 100% !important;
+      max-width: unset !important;
+    }
+
+    .page-node-1295 .layout.row:has(.planifica) .col-12 {
+      padding: 0;
+    }
+
 
     /* ── Sección: rompe el container Bootstrap para ir a full-width ── */
     .page-node-1295 .layout.row:has(.planifica) section.event {
-      padding-top: 0 !important;
-      padding-bottom: 0 !important;
-      margin-top: 100px;
-      margin-bottom: 100px;
+      margin: 0 auto;
+      padding: 0;
       width: 100vw !important;
       max-width: none !important;
-      margin-left: calc(50% - 50vw) !important;
-      margin-right: calc(50% - 50vw) !important;
     }
 
     /* Contenido interior con padding lateral */
-    .page-node-1295 .layout.row:has(.planifica) section.event > div {
-      padding-left: 40px !important;
-      padding-right: 40px !important;
-      max-width: 1440px;
-      margin-left: auto;
-      margin-right: auto;
+    .page-node-1295 .layout.row:has(.planifica) section.event>div {
+      max-width: unset;
+      width: 100%;
+      margin: 0;
+      padding: 0;
     }
 
     /* El bloque de filtros sí ocupa full-width sin max-width */
@@ -72,7 +76,7 @@
     /* ── Bloque de filtros: fondo blanco con sombra ── */
     .page-node-1295 .layout.row:has(.planifica) section.filter-order {
       background-color: #fff !important;
-      box-shadow: 0 5px 4px 2px rgba(0,0,0,.25) !important;
+      box-shadow: 0 5px 4px 2px rgba(0, 0, 0, .25) !important;
       padding: 14px 40px !important;
       margin-bottom: 0 !important;
       display: flex !important;
@@ -81,12 +85,14 @@
     }
 
     /* Wrapper interior de filtros */
-    .page-node-1295 .layout.row:has(.planifica) section.filter-order > div {
+    .page-node-1295 .layout.row:has(.planifica) section.filter-order>div {
       display: flex !important;
       flex-wrap: wrap;
       gap: 15px !important;
       align-items: stretch;
       width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     /* Cada columna de filtro → columna amarilla */
@@ -146,6 +152,7 @@
       gap: 20px !important;
       padding-top: 20px !important;
       padding-bottom: 0 !important;
+      max-width: 1400px;
     }
 
     @media (max-width: 991px) and (min-width: 641px) {
@@ -173,7 +180,7 @@
       overflow: hidden;
     }
 
-    .page-node-1295 .layout.row:has(.planifica) article > a {
+    .page-node-1295 .layout.row:has(.planifica) article>a {
       display: flex !important;
       flex-direction: column;
       gap: 15px;
@@ -208,7 +215,7 @@
     }
 
     /* Título debajo de la imagen */
-    .page-node-1295 .layout.row:has(.planifica) article > a > div {
+    .page-node-1295 .layout.row:has(.planifica) article>a>div {
       padding: 0 !important;
       text-align: left;
     }
@@ -226,44 +233,136 @@
 
     /* ── 1280px+ ── */
     @media (min-width: 1280px) {
-      .page-node-1295 .layout.row:has(.planifica) h2.block-title         { font-size: 35px !important; line-height: 43px !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.event          { margin-top: 120px; margin-bottom: 120px; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order   { padding: 14px 50px !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid { gap: 7px !important; padding: 20px 50px 22px !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order label  { font-size: 20px !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order input  { font-size: 16px !important; line-height: 20px !important; }
-      .page-node-1295 .layout.row:has(.planifica) article h3             { font-size: 20px !important; line-height: 28px !important; }
-      .page-node-1295 .layout.row:has(.planifica) article figure         { padding-bottom: calc(100vh - 450px) !important; }
-      .page-node-1295 .layout.row:has(.planifica) .grid.grid-cols-1      { gap: 20px !important; }
+      .page-node-1295 .layout.row:has(.planifica) h2.block-title {
+        font-size: 35px !important;
+        line-height: 43px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.event {
+        margin-top: 120px;
+        margin-bottom: 120px;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order {
+        padding: 14px 50px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid {
+        gap: 7px !important;
+        padding: 20px 50px 22px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order label {
+        font-size: 20px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order input {
+        font-size: 16px !important;
+        line-height: 20px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) article h3 {
+        font-size: 20px !important;
+        line-height: 28px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) article figure {
+        padding-bottom: calc(100vh - 450px) !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) .grid.grid-cols-1 {
+        gap: 20px !important;
+      }
     }
 
     /* ── max 991px ── */
     @media (max-width: 991px) {
-      .page-node-1295 .layout.row:has(.planifica) h2.block-title         { font-size: 28px !important; line-height: 36px !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.event          { margin-top: 70px; margin-bottom: 70px; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order   { box-shadow: none !important; background-color: transparent !important; padding: 0 0 24px !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order > div { gap: 2% !important; flex-wrap: wrap; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid { width: 32%; flex: unset; padding: 18px 15px 22px !important; align-items: flex-start !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order input  { font-size: 14px !important; padding: 8px 18px !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order label  { font-size: 16px !important; }
-      .page-node-1295 .layout.row:has(.planifica) article figure         { padding-bottom: 35vh !important; }
-      .page-node-1295 .layout.row:has(.planifica) article h3             { font-size: 16px !important; line-height: 22px !important; }
+      .page-node-1295 .layout.row:has(.planifica) h2.block-title {
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.event {
+        margin-top: 70px;
+        margin-bottom: 70px;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order {
+        box-shadow: none !important;
+        background-color: transparent !important;
+        padding: 0 0 24px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order>div {
+        gap: 2% !important;
+        flex-wrap: wrap;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid {
+        width: 32%;
+        flex: unset;
+        padding: 18px 15px 22px !important;
+        align-items: flex-start !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order input {
+        font-size: 14px !important;
+        padding: 8px 18px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order label {
+        font-size: 16px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) article figure {
+        padding-bottom: 35vh !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) article h3 {
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
     }
 
     /* ── max 767px ── */
     @media (max-width: 767px) {
-      .page-node-1295 .layout.row:has(.planifica) h2.block-title         { font-size: 25px !important; line-height: 32px !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.event          { margin-top: 50px; margin-bottom: 50px; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid { width: 100% !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order input  { padding: 10px 22px !important; }
-      .page-node-1295 .layout.row:has(.planifica) article figure         { padding-bottom: 55% !important; }
+      .page-node-1295 .layout.row:has(.planifica) h2.block-title {
+        font-size: 25px !important;
+        line-height: 32px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.event {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid {
+        width: 100% !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order input {
+        padding: 10px 22px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) article figure {
+        padding-bottom: 55% !important;
+      }
     }
 
     /* ── max 479px ── */
     @media (max-width: 479px) {
-      .page-node-1295 .layout.row:has(.planifica) h2.block-title         { font-size: 22px !important; line-height: 29px !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid { padding: 16px 15px 18px !important; }
-      .page-node-1295 .layout.row:has(.planifica) section.filter-order label  { font-size: 15px !important; }
+      .page-node-1295 .layout.row:has(.planifica) h2.block-title {
+        font-size: 22px !important;
+        line-height: 29px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order .grid {
+        padding: 16px 15px 18px !important;
+      }
+
+      .page-node-1295 .layout.row:has(.planifica) section.filter-order label {
+        font-size: 15px !important;
+      }
     }
 
     /* Planifica tu visita */
