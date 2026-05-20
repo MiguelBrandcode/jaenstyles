@@ -1,0 +1,796 @@
+/* SECCION 5 ESTRELLAS */
+<section class="home-banner">
+    <div class="home-banner_line"></div>
+    <div class="home-banner_main"><img
+            src="/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/cinco-estrellas-michelin-gastronomia.png"
+            loading="lazy" alt="" class="image-cover">
+        <div class="home-banner_main-content">
+            <div class="home-banner_button-container">
+                <a href="#" class="home-banner_button">DESCUBRIR</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .home-banner {
+        --primary: Montserrat, sans-serif;
+        --black: black;
+        --white: white;
+        --brand-color: yellow;
+        --grey-line: #d9d9d9;
+        --grey-text: #6b6b6b;
+        --grey-background: #f9f9f9;
+        --border-radius-normal: 10px;
+        --border-radius-large: 20px;
+
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        flex-flow: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 80px 0 !important;
+        display: flex !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    .home-banner_line {
+        background-color: var(--brand-color) !important;
+        width: 90% !important;
+        max-width: 1600px !important;
+        height: 30px !important;
+    }
+
+    .home-banner_main {
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        height: 100vh !important;
+        min-height: 750px !important;
+        display: flex !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .home-banner_main .image-cover {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        z-index: 0 !important;
+    }
+
+    .home-banner_main::after {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        z-index: 0 !important;
+    }
+
+    .home-banner_main-content {
+        z-index: 1 !important;
+        text-align: center !important;
+        padding: 120px 20px !important;
+        position: static !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 1200px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        min-height: inherit !important;
+    }
+
+    .home-banner_title {
+        color: var(--white) !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        font-size: 68px !important;
+        font-weight: 900 !important;
+        line-height: 65px !important;
+        text-align: center !important;
+        font-family: var(--primary) !important;
+    }
+
+    .home-banner_subtitle-container {
+        margin-top: 12px !important;
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .home-banner_subtitle-column {
+        text-align: center !important;
+        max-width: 260px !important;
+    }
+
+    .home-banner_subtitle {
+        font-family: var(--primary) !important;
+        color: var(--white) !important;
+        border-bottom-style: none !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        font-size: 30px !important;
+        font-weight: 400 !important;
+        line-height: 30px !important;
+        text-align: center !important;
+    }
+
+    .home-banner_subtitle-secondary {
+        font-family: var(--primary) !important;
+        color: var(--white) !important;
+        font-weight: 700 !important;
+        font-size: 30px !important;
+        line-height: 100% !important;
+        text-align: center !important;
+        text-transform: uppercase !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .home-banner_button {
+        background-color: var(--brand-color) !important;
+        font-family: var(--primary) !important;
+        color: var(--black) !important;
+        padding: 10px 18px !important;
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        line-height: 18px !important;
+        text-decoration: none !important;
+        transition: all .2s !important;
+        display: inline-block !important;
+    }
+
+    .home-banner_button:hover {
+        background-color: var(--black) !important;
+        color: var(--white) !important;
+    }
+
+    .home-banner_button-container {
+        position: absolute !important;
+        bottom: 140px !important;
+        left: max(40px, calc(50% - 600px + 40px)) !important;
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        margin-top: 0 !important;
+    }
+
+    @media (min-width: 1280px) {
+        .home-banner_title {
+            font-size: 88px !important;
+            line-height: 85px !important;
+        }
+
+        .home-banner_subtitle {
+            font-size: 36px !important;
+            line-height: 36px !important;
+        }
+
+        .home-banner_subtitle-secondary {
+            font-size: 36px !important;
+        }
+
+        .home-banner_button {
+            padding: 12px 22px !important;
+            font-size: 24px !important;
+            line-height: 24px !important;
+        }
+
+        .home-banner_main {
+            height: 80vh !important;
+            min-height: 650px !important;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .home-banner {
+            padding: 60px 0 !important;
+        }
+
+        .home-banner_main {
+            height: auto !important;
+            min-height: 550px !important;
+        }
+
+        .home-banner_main-content {
+            padding-top: 100px !important;
+            padding-bottom: 100px !important;
+        }
+
+        .home-banner_title {
+            font-size: 55px !important;
+            line-height: 52px !important;
+        }
+
+        .home-banner_subtitle {
+            font-size: 25px !important;
+            line-height: 25px !important;
+        }
+
+        .home-banner_subtitle-secondary {
+            font-size: 25px !important;
+        }
+
+        .home-banner_button {
+            padding: 8px 16px !important;
+            font-size: 16px !important;
+            line-height: 16px !important;
+        }
+
+        .home-banner_line {
+            height: 25px !important;
+        }
+
+        .home-banner_button-container {
+            left: 40px !important;
+            bottom: 80px !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .home-banner {
+            padding: 50px 0 !important;
+        }
+
+        .home-banner_main {
+            height: auto !important;
+            min-height: 450px !important;
+        }
+
+        .home-banner_main-content {
+            padding-top: 80px !important;
+            padding-bottom: 80px !important;
+        }
+
+        .home-banner_title {
+            font-size: 35px !important;
+            line-height: 35px !important;
+        }
+
+        .home-banner_subtitle {
+            font-size: 20px !important;
+            line-height: 20px !important;
+        }
+
+        .home-banner_subtitle-secondary {
+            font-size: 20px !important;
+        }
+
+        .home-banner_button {
+            font-size: 14px !important;
+            line-height: 14px !important;
+            padding: 8px 16px !important;
+        }
+
+        .home-banner_line {
+            height: 20px !important;
+        }
+
+        .home-banner_button-container {
+            position: relative !important;
+            bottom: auto !important;
+            left: auto !important;
+            justify-content: center !important;
+            margin-top: 24px !important;
+        }
+    }
+
+    @media (max-width: 479px) {
+        .home-banner {
+            padding: 40px 0 !important;
+        }
+
+        .home-banner_title {
+            font-size: 28px !important;
+            line-height: 30px !important;
+        }
+
+        .home-banner_subtitle {
+            font-size: 16px !important;
+            line-height: 18px !important;
+        }
+
+        .home-banner_subtitle-secondary {
+            font-size: 16px !important;
+        }
+
+        .home-banner_main-content {
+            padding-top: 110px !important;
+            padding-bottom: 60px !important;
+        }
+
+        .home-banner_subtitle-column {
+            max-width: 200px !important;
+        }
+    }
+</style>
+
+/* END SECTION */
+
+
+/* SECCION Aceites */
+<section class="jaen-seleccion">
+    <div class="container">
+
+        <header class="section-header">
+            <h2>ACEITES JAÉN SELECCIÓN</h2>
+        </header>
+
+        <div class="section-content">
+            <p>El distintivo «Jaén Selección», creado por la Diputación de Jaén, engloba a los mejores aceites de oliva
+                virgen extra jiennenses de cada cosecha. Con este distintivo se premia la excelencia de este producto.
+            </p>
+            <p>La selección de estos aceites sale de una Cata-Concurso, que se convoca con carácter anual, bajo los
+                criterios de un jurado integrado por profesionales procedentes de los mejores paneles de cata del país.
+                Con este distintivo se significan cada año los mejores aceites de Jaén, principal territorio productor
+                de aceite de oliva del mundo. Tras su selección, estos aceites están presentes en todas las acciones de
+                promoción turística y agroalimentaria que impulsa la Diputación de Jaén y ocupan un papel protagonista
+                en la estrategia turística OleotourJaén.</p>
+        </div>
+
+        <div class="section-image">
+            <img src="/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/BodegonJaenSeleccion26.jpg"
+                alt="Bodegón Aceites Jaén Selección 2026">
+        </div>
+
+        <div class="section-actions">
+            <a href="#" class="btn-primary">VER SELECCIONADOS 2026</a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        color: #333333;
+        background-color: #ffffff;
+        line-height: 1.6;
+    }
+
+    .jaen-seleccion {
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .jaen-seleccion .container {
+        max-width: 900px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        color: #000000;
+    }
+
+    .section-content p {
+        font-size: 15px;
+        font-weight: 300;
+        color: #444444;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    .section-image {
+        margin: 50px 0;
+        width: 100%;
+    }
+
+    .section-image img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .section-actions {
+        margin-top: 30px;
+    }
+
+    .btn-primary {
+        display: inline-block;
+        background-color: #666666;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 15px 30px;
+        border-radius: 8px;
+        letter-spacing: 0.5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #4d4d4d;
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        .section-header h2 {
+            font-size: 22px;
+        }
+
+        .section-content p {
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .btn-primary {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+</style>
+
+/* END SECTION */
+
+/* SECTIION banner aceite */
+<section class="home-banner">
+    <div class="home-banner_line"></div>
+    <div class="home-banner_main">
+        <img src="/gestion_destino/diputacion_provincial_de_jaen/sites/diputacionprovincialdejaen/files/aceite.jpg"
+            loading="lazy" alt="" class="image-cover">
+        <div class="home-banner_main-content">
+
+            <h2 class="home-banner_title">LOS CHEF DEL ACEITE</h2>
+
+            <div class="home-banner_subtitle-container">
+                <div class="home-banner_subtitle-column">
+                    <h3 class="home-banner_subtitle-secondary">TRADICIÓN, VANGUARDIA Y EL ARTE DEL TAPEO</h3>
+                </div>
+            </div>
+
+            <div class="home-banner_button-container">
+                <a href="#" class="home-banner_button">DESCUBRIR</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .home-banner {
+        --primary: Montserrat, sans-serif;
+        --black: black;
+        --white: white;
+        --brand-color: yellow;
+        --grey-line: #d9d9d9;
+        --grey-text: #6b6b6b;
+        --grey-background: #f9f9f9;
+        --border-radius-normal: 10px;
+        --border-radius-large: 20px;
+
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        flex-flow: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 80px 0 !important;
+        display: flex !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    .home-banner_line {
+        background-color: var(--brand-color) !important;
+        width: 90% !important;
+        max-width: 1600px !important;
+        height: 30px !important;
+    }
+
+    .home-banner_main {
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        height: 100vh !important;
+        min-height: 750px !important;
+        display: flex !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .home-banner_main .image-cover {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        z-index: 0 !important;
+    }
+
+    .home-banner_main::after {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        z-index: 0 !important;
+    }
+
+    .home-banner_main-content {
+        z-index: 1 !important;
+        text-align: center !important;
+        padding: 120px 20px !important;
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 1200px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .home-banner_title {
+        color: var(--white) !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        font-size: 68px !important;
+        font-weight: 900 !important;
+        line-height: 65px !important;
+        text-align: center !important;
+        font-family: var(--primary) !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .home-banner_subtitle-container {
+        margin-top: 12px !important;
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .home-banner_subtitle-column {
+        text-align: center !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .home-banner_subtitle {
+        font-family: var(--primary) !important;
+        color: var(--white) !important;
+        border-bottom-style: none !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        font-size: 30px !important;
+        font-weight: 400 !important;
+        line-height: 30px !important;
+        text-align: center !important;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .home-banner_subtitle-secondary {
+        font-family: var(--primary) !important;
+        color: var(--white) !important;
+        font-weight: 700 !important;
+        font-size: 30px !important;
+        line-height: 100% !important;
+        text-align: center !important;
+        text-transform: uppercase !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        white-space: nowrap !important;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .home-banner_button {
+        background-color: var(--brand-color) !important;
+        font-family: var(--primary) !important;
+        color: var(--black) !important;
+        padding: 10px 18px !important;
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        line-height: 18px !important;
+        text-decoration: none !important;
+        transition: all .2s !important;
+        display: inline-block !important;
+    }
+
+    .home-banner_button:hover {
+        background-color: var(--black) !important;
+        color: var(--white) !important;
+    }
+
+    .home-banner_button-container {
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: 24px !important;
+        display: flex !important;
+        width: 100% !important;
+    }
+
+    @media (min-width: 1280px) {
+        .home-banner_title {
+            font-size: 88px !important;
+            line-height: 85px !important;
+        }
+
+        .home-banner_subtitle {
+            font-size: 36px !important;
+            line-height: 36px !important;
+        }
+
+        .home-banner_subtitle-secondary {
+            font-size: 36px !important;
+        }
+
+        .home-banner_button {
+            padding: 12px 22px !important;
+            font-size: 24px !important;
+            line-height: 24px !important;
+        }
+
+        .home-banner_main {
+            height: 80vh !important;
+            min-height: 650px !important;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .home-banner {
+            padding: 60px 0 !important;
+        }
+
+        .home-banner_main {
+            height: auto !important;
+            min-height: 550px !important;
+        }
+
+        .home-banner_main-content {
+            padding-top: 100px !important;
+            padding-bottom: 100px !important;
+        }
+
+        .home-banner_title {
+            font-size: 55px !important;
+            line-height: 52px !important;
+        }
+
+        .home-banner_subtitle {
+            font-size: 25px !important;
+            line-height: 25px !important;
+        }
+
+        .home-banner_subtitle-secondary {
+            font-size: 25px !important;
+            white-space: normal !important;
+        }
+
+        .home-banner_button {
+            padding: 8px 16px !important;
+            font-size: 16px !important;
+            line-height: 16px !important;
+        }
+
+        .home-banner_line {
+            height: 25px !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .home-banner {
+            padding: 50px 0 !important;
+        }
+
+        .home-banner_main {
+            height: auto !important;
+            min-height: 450px !important;
+        }
+
+        .home-banner_main-content {
+            padding-top: 80px !important;
+            padding-bottom: 80px !important;
+        }
+
+        .home-banner_title {
+            font-size: 35px !important;
+            line-height: 35px !important;
+        }
+
+        .home-banner_subtitle {
+            font-size: 20px !important;
+            line-height: 20px !important;
+        }
+
+        .home-banner_subtitle-secondary {
+            font-size: 20px !important;
+            white-space: normal !important;
+        }
+
+        .home-banner_button {
+            font-size: 14px !important;
+            line-height: 14px !important;
+            padding: 8px 16px !important;
+        }
+
+        .home-banner_line {
+            height: 20px !important;
+        }
+    }
+
+    @media (max-width: 479px) {
+        .home-banner {
+            padding: 40px 0 !important;
+        }
+
+        .home-banner_title {
+            font-size: 28px !important;
+            line-height: 30px !important;
+        }
+
+        .home-banner_subtitle {
+            font-size: 16px !important;
+            line-height: 18px !important;
+        }
+
+        .home-banner_subtitle-secondary {
+            font-size: 16px !important;
+            white-space: normal !important;
+        }
+
+        .home-banner_main-content {
+            padding-top: 60px !important;
+            padding-bottom: 60px !important;
+        }
+
+        .home-banner_subtitle-column {
+            max-width: 100% !important;
+            padding: 0 15px !important;
+        }
+    }
+</style>
+
+/* END SECTION */
