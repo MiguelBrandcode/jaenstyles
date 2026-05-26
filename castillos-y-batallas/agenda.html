@@ -1,10 +1,29 @@
 <div class="agenda" id="edition-block">
     <style>
         /* START IDS: */
-        /* .page-node-1295 - Home */
+        /* .page-node-1424 - Nueva Página Corregida */
         /* STOP IDS: */
+
+        /* ── Asegurar visibilidad del Título ── */
+        .page-node-1424 h2.block-title,
+        .page-node-1424 .layout.row:has(.agenda) h2.block-title {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            font-family: 'Montserrat', sans-serif !important;
+            color: #000000 !important;
+            /* Forzado a negro, cambia si tu fondo es oscuro */
+            font-size: 32px !important;
+            font-weight: 500 !important;
+            line-height: 40px !important;
+            text-align: center !important;
+            margin: 0 0 20px 0 !important;
+            padding: 0 !important;
+            text-transform: uppercase !important;
+        }
+
         /* ── Sección ── */
-        .page-node-1295 .layout.row:has(.agenda) section.event {
+        .page-node-1424 .layout.row:has(.agenda) section.event {
             padding-top: 0 !important;
             padding-bottom: 0 !important;
             margin-top: 80px;
@@ -13,50 +32,39 @@
         }
 
         /* ── Título centrado ── */
-        .page-node-1295 .layout.row:has(.agenda) .flex.items-center.flex-wrap {
+        .page-node-1424 .layout.row:has(.agenda) .flex.items-center.flex-wrap {
             justify-content: center !important;
         }
 
-        .page-node-1295 .layout.row:has(.agenda) header.w-full {
+        .page-node-1424 .layout.row:has(.agenda) header.w-full {
             width: 100% !important;
             text-align: center;
             padding: 0 !important;
             margin: 0 0 20px !important;
-        }
-
-        .page-node-1295 .layout.row:has(.agenda) h2.block-title {
-            font-family: 'Montserrat', sans-serif !important;
-            color: #000 !important;
-            font-size: 32px !important;
-            font-weight: 500 !important;
-            line-height: 40px !important;
-            text-align: center;
-            margin: 0 !important;
-            padding: 0 !important;
-            text-transform: uppercase;
+            display: block !important;
         }
 
         /* ── Grid: 4 columnas ── */
-        .page-node-1295 .layout.row:has(.agenda) .grid {
+        .page-node-1424 .layout.row:has(.agenda) .grid {
             grid-template-columns: repeat(4, 1fr) !important;
             gap: 15px !important;
             padding-bottom: 0 !important;
         }
 
         @media (max-width: 1279px) and (min-width: 641px) {
-            .page-node-1295 .layout.row:has(.agenda) .grid {
+            .page-node-1424 .layout.row:has(.agenda) .grid {
                 grid-template-columns: repeat(2, 1fr) !important;
             }
         }
 
         @media (max-width: 640px) {
-            .page-node-1295 .layout.row:has(.agenda) .grid {
+            .page-node-1424 .layout.row:has(.agenda) .grid {
                 grid-template-columns: 1fr !important;
             }
         }
 
         /* ── Cards ── */
-        .page-node-1295 .layout.row:has(.agenda) article {
+        .page-node-1424 .layout.row:has(.agenda) article {
             border-radius: 10px !important;
             overflow: hidden !important;
             background-color: #000 !important;
@@ -64,8 +72,8 @@
             cursor: pointer;
         }
 
-        /* Imagen: altura mínima como el Webflow */
-        .page-node-1295 .layout.row:has(.agenda) article figure {
+        /* Imagen */
+        .page-node-1424 .layout.row:has(.agenda) article figure {
             margin: 0;
             padding: 0;
             padding-bottom: 65vh;
@@ -75,19 +83,16 @@
             position: relative;
         }
 
-        /* Gradiente Webflow */
-        .page-node-1295 .layout.row:has(.agenda) article figure::after {
+        /* Gradiente */
+        .page-node-1424 .layout.row:has(.agenda) article figure::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top,
-                    rgba(0, 0, 0, .85) 0%,
-                    rgba(0, 0, 0, .35) 40%,
-                    transparent 65%);
+            background: linear-gradient(to top, rgba(0, 0, 0, .85) 0%, rgba(0, 0, 0, .35) 40%, transparent 65%);
             pointer-events: none;
         }
 
-        .page-node-1295 .layout.row:has(.agenda) article figure img {
+        .page-node-1424 .layout.row:has(.agenda) article figure img {
             position: absolute !important;
             inset: 0;
             width: 100% !important;
@@ -98,16 +103,17 @@
             display: block;
         }
 
-        .page-node-1295 .layout.row:has(.agenda) article:hover figure img {
+        .page-node-1424 .layout.row:has(.agenda) article:hover figure img {
             transform: scale(1.06) !important;
         }
 
-        .page-node-1295 .layout.row:has(.agenda) article a {
+        .page-node-1424 .layout.row:has(.agenda) article a {
             position: relative;
         }
 
-        /* ── Badge de dirección → estilo home-agenda_date-container ── */
-        .page-node-1295 .layout.row:has(.agenda) article blockquote {
+        /* ── Badge de dirección (FECHA) -> COLOR ACTUALIZADO A #04435d ── */
+        .page-node-1424 .layout.row:has(.agenda) article blockquote {
+            position: absolute !important;
             top: 50% !important;
             left: 0 !important;
             width: auto !important;
@@ -115,18 +121,27 @@
             padding: 0 !important;
             background: transparent !important;
             display: block !important;
+            opacity: 1 !important;
+            z-index: 10 !important;
+            isolation: isolate !important;
+            /* Aísla el elemento de opacidades heredadas de los padres */
         }
 
-        .page-node-1295 .layout.row:has(.agenda) article blockquote>div {
+        .page-node-1424 .layout.row:has(.agenda) article blockquote>div {
             display: block !important;
+            opacity: 1 !important;
         }
 
-        .page-node-1295 .layout.row:has(.agenda) article blockquote mark {
+        .page-node-1424 .layout.row:has(.agenda) article blockquote mark {
             display: flex !important;
             align-items: center;
             justify-content: center;
-            background-color: #ffff00 !important;
-            color: #000 !important;
+            background-color: #04435d !important;
+            /* Nuevo color de fondo */
+            color: #ffffff !important;
+            /* Cambiado a blanco para contraste */
+            opacity: 1 !important;
+            /* Forzamos opacidad sólida */
             font-family: 'Montserrat', sans-serif !important;
             font-size: 13px !important;
             font-weight: 700 !important;
@@ -140,13 +155,13 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            box-shadow: 2px 0 8px rgba(0, 0, 0, .15);
+            box-shadow: 2px 0 8px rgba(0, 0, 0, .3) !important;
             border: none !important;
             text-wrap: auto;
         }
 
-        /* ── Overlay título (igual que Imprescindibles) ── */
-        .page-node-1295 .layout.row:has(.agenda) .absolute-item-grid {
+        /* ── Overlay título ── */
+        .page-node-1424 .layout.row:has(.agenda) .absolute-item-grid {
             position: absolute !important;
             bottom: 20px !important;
             left: 0;
@@ -159,7 +174,7 @@
             z-index: 2;
         }
 
-        .page-node-1295 .layout.row:has(.agenda) .absolute-item-grid h3 {
+        .page-node-1424 .layout.row:has(.agenda) .absolute-item-grid h3 {
             font-family: 'Montserrat', sans-serif !important;
             font-size: 17px !important;
             font-weight: 700 !important;
@@ -171,135 +186,127 @@
             text-shadow: 0 2px 6px rgba(0, 0, 0, .4);
         }
 
-        /* Ocultar flechita */
-        .page-node-1295 .layout.row:has(.agenda) .absolute-item-grid>div {
+        .page-node-1424 .layout.row:has(.agenda) .absolute-item-grid>div {
             display: none !important;
         }
 
-        /* ── 1280px+ ── */
+        /* ── Responsive Medias ── */
         @media (min-width: 1280px) {
-            .page-node-1295 .layout.row:has(.agenda) h2.block-title {
+
+            .page-node-1424 h2.block-title,
+            .page-node-1424 .layout.row:has(.agenda) h2.block-title {
                 font-size: 35px !important;
                 line-height: 43px !important;
             }
 
-            .page-node-1295 .layout.row:has(.agenda) section.event {
+            .page-node-1424 .layout.row:has(.agenda) section.event {
                 margin-top: 140px;
                 margin-bottom: 140px;
             }
 
-            .page-node-1295 .layout.row:has(.agenda) article blockquote mark {
+            .page-node-1424 .layout.row:has(.agenda) article blockquote mark {
                 height: 90px !important;
                 max-width: 150px;
                 font-size: 14px !important;
             }
 
-            .page-node-1295 .layout.row:has(.agenda) .absolute-item-grid {
+            .page-node-1424 .layout.row:has(.agenda) .absolute-item-grid {
                 bottom: 25px !important;
                 padding-left: 22px !important;
                 padding-right: 22px !important;
             }
 
-            .page-node-1295 .layout.row:has(.agenda) .absolute-item-grid h3 {
+            .page-node-1424 .layout.row:has(.agenda) .absolute-item-grid h3 {
                 font-size: 20px !important;
                 line-height: 24px !important;
             }
         }
 
-        /* ── max 991px ── */
         @media (max-width: 991px) {
-            .page-node-1295 .layout.row:has(.agenda) h2.block-title {
+
+            .page-node-1424 h2.block-title,
+            .page-node-1424 .layout.row:has(.agenda) h2.block-title {
                 font-size: 28px !important;
                 line-height: 36px !important;
             }
 
-            .page-node-1295 .layout.row:has(.agenda) section.event {
+            .page-node-1424 .layout.row:has(.agenda) section.event {
                 margin-top: 70px;
                 margin-bottom: 70px;
             }
 
-            .page-node-1295 .layout.row:has(.agenda) article figure {
+            .page-node-1424 .layout.row:has(.agenda) article figure {
                 padding-bottom: 50vh;
             }
         }
 
-        /* ── max 767px ── */
         @media (max-width: 767px) {
-            .page-node-1295 .layout.row:has(.agenda) h2.block-title {
+
+            .page-node-1424 h2.block-title,
+            .page-node-1424 .layout.row:has(.agenda) h2.block-title {
                 font-size: 25px !important;
                 line-height: 32px !important;
             }
 
-            .page-node-1295 .layout.row:has(.agenda) section.event {
+            .page-node-1424 .layout.row:has(.agenda) section.event {
                 margin-top: 50px;
                 margin-bottom: 50px;
             }
 
-            .page-node-1295 .layout.row:has(.agenda) article figure {
+            .page-node-1424 .layout.row:has(.agenda) article figure {
                 padding-bottom: 55%;
             }
         }
 
-        /* ── max 500px (Sube el bloque amarillo) ── */
         @media (max-width: 500px) {
-            .page-node-1295 .layout.row:has(.agenda) article blockquote {
+            .page-node-1424 .layout.row:has(.agenda) article blockquote {
                 top: 42% !important;
             }
         }
 
-        /* ── max 479px ── */
         @media (max-width: 479px) {
-            .page-node-1295 .layout.row:has(.agenda) h2.block-title {
+
+            .page-node-1424 h2.block-title,
+            .page-node-1424 .layout.row:has(.agenda) h2.block-title {
                 font-size: 22px !important;
                 line-height: 29px !important;
             }
         }
 
-        /* ── max 430px (Sube el bloque amarillo otro poco) ── */
         @media (max-width: 430px) {
-            .page-node-1295 .layout.row:has(.agenda) article blockquote {
+            .page-node-1424 .layout.row:has(.agenda) article blockquote {
                 top: 34% !important;
             }
         }
 
-        /* ── max 375px (Sube un 8% más para pantallas pequeñas) ── */
         @media (max-width: 375px) {
-            .page-node-1295 .layout.row:has(.agenda) article blockquote {
+            .page-node-1424 .layout.row:has(.agenda) article blockquote {
                 top: 26% !important;
             }
         }
-
-        /* Agenda */
-    </style>
+    </style>&nbsp;
     <script>
         (function () {
             function initSegitturDates() {
                 document.querySelectorAll('[id*="segittur_dynamic_list"]').forEach(function (host) {
                     var root = host.shadowRoot || host;
-
                     if (host.hasAttribute('data-dates-formatted')) return;
                     host.setAttribute('data-dates-formatted', '1');
-
                     root.querySelectorAll('.paginable-item blockquote mark').forEach(function (el) {
                         var cleanText = el.textContent.trim();
                         var parts = cleanText.split(' ')[0].split('-');
-
                         if (parts.length === 3) {
                             var meses = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
                             var dia = parseInt(parts[0], 10);
                             var mes = meses[parseInt(parts[1], 10) - 1];
-
-                            // Forzamos clases de Tailwind para diseño vertical, centrado y tamaños de fuente mas grandes
                             el.className += " flex flex-col items-center justify-center text-center leading-tight min-w-[50px] py-1 px-2";
-
-                            // Inyectamos el HTML con el día arriba (más grande y negrita) y el mes abajo
-                            el.innerHTML = '<span class="text-xl font-bold">' + dia + '</span>' +
-                                '<span class="text-xs uppercase font-semibold tracking-wider">' + mes + '</span>';
+                            // Cambiado color:#000 por color:#fff para asegurar visibilidad en el nuevo fondo azul oscuro
+                            el.innerHTML = '<span class="text-xl font-bold" style="opacity:1 !important; color:#fff !important;">' + dia + '</span>' +
+                                '<span class="text-xs uppercase font-semibold tracking-wider" style="opacity:1 !important; color:#fff !important;">' + mes + '</span>';
                         }
                     });
                 });
             }
-
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', initSegitturDates);
             } else {
